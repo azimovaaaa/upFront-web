@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
-import Cards from '/Users/dhc/Desktop/upFront-web/upfront-web/src/components/Cards.js';
+import Cards from './/Cards.js';
 
 
 function HeroSection() {
