@@ -1,0 +1,114 @@
+.Auth-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 70vh;
+    background-color: black;
+}
+  
+.Auth-form {
+    width: 420px;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: #242424;
+}
+  
+.Auth-form-content {
+    padding-left: 12%;
+    padding-right: 12%;
+}
+  
+.Auth-form-title {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 24px;
+    color: white;
+    font-weight: 800;
+}
+  
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+}
+  
+.Auth-form-content > h1{
+    font-size: 29px;
+}
+a:link {
+    
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+.mt-2 {
+    margin-top: .5rem!important;
+}
+.mt-1 {
+    margin-top: .25rem!important;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.gap-2 {
+    gap: .5rem!important;
+}
+
+.d-grid {
+    display: grid!important;
+    margin-top: 2rem;
+}
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #0d6efd;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 0.4rem 0.2rem;
+    font-family: var(--bs-btn-font-family);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px;
+    border-radius: 0.375rem;
+    background-color: var(--bs-btn-bg);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.button button:hover {
+    
+    transition: all 0.3s ease-out;
+    background: #0d4e88e9;
+    color: white;
+    transition: 250ms;
+    /* color: #ff4e4e; */
+}
+
+.forgot-password{
+    margin-top: 1rem;
+    color: grey;
+}
