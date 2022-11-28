@@ -53,11 +53,18 @@ div{
 .w-full{
   width: 100%;
 }
+.w-full img{
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
 .flex-wrap {
   flex-wrap: wrap;
   text-align: center;
   display: flex;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   margin-bottom: rem;
 }
 .steps{

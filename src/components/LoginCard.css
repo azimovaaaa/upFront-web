@@ -39,11 +39,11 @@ label {
 .Auth-form-content > h1{
     font-size: 29px;
 }
-a:link {
-    
+
+/* a:link {
     background-color: transparent;
     text-decoration: none;
-}
+} */
 
 .mt-3 {
     margin-top: 1rem;
@@ -77,13 +77,13 @@ a:link {
     display: grid!important;
     margin-top: 2rem;
 }
-.btn-primary {
+.button .btn-primary {
     --bs-btn-color: #fff;
     --bs-btn-bg: #0d6efd;
 }
 
 
-.btn {
+.button .btn {
     display: inline-block;
     padding: 0.4rem 0.2rem;
     font-family: var(--bs-btn-font-family);

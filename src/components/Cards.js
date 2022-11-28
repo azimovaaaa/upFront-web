@@ -75,6 +75,8 @@ function Cards() {
                 </div>
               </div>
             </div> */}
+            <img alt="How it works" src="images/howitworks.png" class="w-full"/>
+
             <div class='flex-wrap'>
               <div class='steps'>
                 <div class='step-num'>1</div>
