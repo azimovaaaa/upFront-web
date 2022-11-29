@@ -51,10 +51,14 @@ div{
   margin-right: auto;
 }
 .w-full{
-  width: 100%;
+  width:80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
 }
-.w-full img{
-  width: 80%;
+.w-full > img{
+  width: 50%;
   display: block;
   margin-left: auto;
   margin-right: auto;

@@ -111,6 +111,30 @@ function Footer() {
       </section>
     </div>
   );
+};
+
+function Footer2() {
+  return(
+  <>
+    {/* <div className='footer2-container'>
+      <medium class='website-rights'>© UpFront LLC 2022</medium>
+      <Link to='/'>Terms of Service</Link>
+    </div> */}
+    <section class='footer2-container'>
+        <div class='footer2-container-wrap'>
+          <div class='footer-logo'>
+            <medium class='website-rights'>© UpFront LLC 2022</medium>
+          </div>
+          <div class='footer2-btm-right'>
+            <Link to='/'>Privacy Policy</Link>
+            <Link to='/'>Terms of Service</Link>
+            
+          </div>
+        </div>
+      </section>
+  </>
+  )
+  
 }
 
-export default Footer;
+export  {Footer, Footer2}

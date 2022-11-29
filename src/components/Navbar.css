@@ -18,7 +18,11 @@
   max-width: 1500px;
 }
 
-.navbar-logo {
+/* .navbar-container .btn{
+  width: 120%;
+
+} */
+/* .navbar-logo {
   color: #fff;
   justify-self: start;
   margin-left: 20px;
@@ -28,8 +32,11 @@
   display: flex;
   align-items: center;
   font-family: 'Times New Roman';
+} */
+.nav-logo{
+  display: fixed;
+  width: 30%;
 }
-
 .fa-typo3 {
   margin-left: 0.5rem;
   font-size: 1.8rem;
@@ -119,11 +126,11 @@
     border-radius: 0;
   }
 
-  .navbar-logo {
-    position: absolute;
-    top: 0;
-    left:0;    
-    transform: translate(25%, 50%);
+  .nav-logo {
+    position:relative;
+    top: 0; 
+    left:2;    
+    /* transform: translate(25%, 50%); */
   }
 
   .menu-icon {

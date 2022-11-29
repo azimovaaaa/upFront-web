@@ -51,32 +51,10 @@ function Cards() {
         </div>
       </div>
       <div class='how'>
-        <h1>How Does It Work?</h1>
+        <img alt="How it works" src="images/howitworks.png" class="w-full"/>
+        {/* <h1>How Does It Work?</h1>
         <div class="how-it-works">
           <div class="w-full">
-            {/* <div class="flex flex-wrap justify-center">
-              <div class="px-4 py-16 lg:hidden">
-                <img alt="How it works" src="/img/founderpath-animation/founderpath-animation.svg" class="w-full"/>
-              </div>
-              <div class="hidden lg:block">
-                <div class="founderpath-animation relative py-24 flex flex-wrap justify-center">
-                  <div class="relative flex flex-wrap justify-center overflow-hidden">
-                    <div class="bg-gradient-to-r from-grayLightest via-grayLightest to-transparent absolute top-0 bottom-2/3 left-0 w-1/3 z-10"></div>
-                    <div class="bg-gradient-to-r from-grayLightest via-grayLightest to-transparent absolute top-0 bottom-0 left-0 w-1/6 z-20"></div>
-                    <div class="bg-gradient-to-r from-grayLightest via-grayLightest to-transparent absolute top-0 bottom-0 left-0 w-1/6 z-20"></div>
-                    <div class="bg-gradient-to-r from-grayLightest via-grayLightest to-transparent absolute bottom-0 top-2/3 left-0 w-1/3 z-10"></div>
-                    <img alt="dots" src="/img/founderpath-animation/founderpath-animation-dots.svg" class="ml-36 mr-16"></img>
-                  </div>
-                  <div class="z-30 relative -ml-8">
-                    <img alt="square" src="/img/founderpath-animation/founderpath-animation-square.svg"/>
-                    <img alt="founderpath-bg" src="/img/founderpath-animation/founderpath-bg.svg" class="founderpath-animation-logo-bg"/>
-                    <img alt="founderpath" src="/img/founderpath-animation/founderpath-lg.svg" class="founderpath-animation-logo-icon"/>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-            <img alt="How it works" src="images/howitworks.png" class="w-full"/>
-
             <div class='flex-wrap'>
               <div class='steps'>
                 <div class='step-num'>1</div>
@@ -93,7 +71,7 @@ function Cards() {
               
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       
     </div>

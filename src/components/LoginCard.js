@@ -33,8 +33,7 @@ function LoginCard() {
                     </div>
 
                     <p className="forgot-password">
-                        {/* <a href="#">Forgot password?</a> */}
-                        Forgot password?
+                        <a href="#">Forgot password?</a>
                     </p>
                     
                 </div>

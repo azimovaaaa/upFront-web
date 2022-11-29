@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.css';
-import Footer from '../Footer';
+import {Footer, Footer2} from '../Footer';
 import Faq from '../Faq'
 
 export default function FAQ() {
