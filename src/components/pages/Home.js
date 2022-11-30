@@ -1,11 +1,12 @@
 import React from 'react';
 import '../../App.css';
 import HeroSection from '../HeroSection';
-import {Footer, Footer2} from '../Footer';
-
+import {Footer} from '../Footer';
+import {Navbar} from '../../components/Navbar';
 function Home() {
   return (
     <>
+      <Navbar />
       <HeroSection />
       <Footer />
     </>

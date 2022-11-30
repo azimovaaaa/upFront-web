@@ -49,7 +49,7 @@ function Create() {
                         By continuing you agree to the UpFront <a href="/"> terms of service </a> and <a href="/"> privacy policy </a>. 
                     </p>
                     <div className="cont-button">
-                        <button type="submit" className="btn">
+                        <button formaction='/landlord-home' type="submit" className="btn">
                             Continue
                         </button>
                     </div>

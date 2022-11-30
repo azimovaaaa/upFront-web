@@ -1,8 +1,6 @@
 import React from 'react';
 import './LoginCard.css';
 
-// import "bootstrap/dist/css/bootstrap.min.css"
-
 function LoginCard() {
     return (
         <>
@@ -27,9 +25,9 @@ function LoginCard() {
                         />
                     </div>
                     <div className="d-grid gap-2 mt-3 button">
-                        <button type="submit" className="btn btn-primary">
-                            Submit
-                        </button>
+                            <button formaction='/landlord-home' type="submit" className="btn btn-primary">
+                                Submit
+                            </button>
                     </div>
 
                     <p className="forgot-password">

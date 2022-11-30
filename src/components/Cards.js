@@ -52,26 +52,6 @@ function Cards() {
       </div>
       <div class='how'>
         <img alt="How it works" src="images/howitworks.png" class="w-full"/>
-        {/* <h1>How Does It Work?</h1>
-        <div class="how-it-works">
-          <div class="w-full">
-            <div class='flex-wrap'>
-              <div class='steps'>
-                <div class='step-num'>1</div>
-                <p class='step-text'>Connect your existing payment and rental management tools</p>
-              </div>
-              <div class='steps'>
-                <div class='step-num'>2</div>
-                <p class='step-text'>Post rental contracts for sale in the UpFront marketplace</p>
-              </div>
-              <div class='steps'>
-                <div class='step-num'>3</div>
-                <p class='step-text'>Proceeds get wired within 24 hours of transaction</p>
-              </div>
-              
-            </div>
-          </div>
-        </div> */}
       </div>
       
     </div>

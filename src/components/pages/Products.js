@@ -1,11 +1,12 @@
 import React from 'react';
 import '../../App.css';
-import {Footer, Footer2} from '../Footer';
-
+import {Footer} from '../Footer';
+import {Navbar} from '../../components/Navbar';
 
 export default function Products() {
   return(
     <>
+      <Navbar />
       <h1 className='products'>PRODUCTS</h1>;
       <Footer />
     </>
