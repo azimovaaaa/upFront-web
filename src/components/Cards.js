@@ -13,13 +13,13 @@ function Cards() {
             <CardItem
               src='images/img-9.jpg'
               text='Placeholder'
-              label='Adventure'
+              label=' '
               path='/services'
             />
             <CardItem
               src='images/img-2.jpg'
               text='Placeholder'
-              label='Luxury'
+              label=' '
               path='/services'
             />
           </ul>
@@ -27,19 +27,19 @@ function Cards() {
             <CardItem
               src='images/img-3.jpg'
               text='Placeholder'
-              label='Mystery'
+              label=' '
               path='/services'
             />
             <CardItem
               src='images/img-4.jpg'
               text='Placeholder'
-              label='Adventure'
+              label=' '
               path='/products'
             />
             <CardItem
               src='images/img-8.jpg'
               text='Placeholder'
-              label='Adrenaline'
+              label=' '
               path='/sign-up'
             />
           </ul>      
