@@ -3,6 +3,7 @@ import '../../App.css';
 import HeroSection from '../HeroSection';
 import {Footer} from '../Footer';
 import {Navbar} from '../../components/Navbar';
+
 function Home() {
   return (
     <>
@@ -13,4 +14,14 @@ function Home() {
   );
 }
 
-export default Home;
+function Home_investor() {
+  return (
+    <>
+      <Navbar />
+      <HeroSection />
+      <Footer />
+    </>
+  );
+}
+
+export {Home, Home_investor}

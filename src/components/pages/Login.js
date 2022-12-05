@@ -5,7 +5,7 @@ import LoginCard from '../LoginCard';
 import {Navbar} from '../../components/Navbar';
 
 
-export default function Login() {
+function Login_landlord() {
   return(
     <>
       <Navbar />
@@ -14,3 +14,15 @@ export default function Login() {
     </>
   )
 }
+
+function Login_investor() {
+  return(
+    <>
+      <Navbar />
+      <LoginCard />
+      <Footer2 />
+    </>
+  )
+}
+
+export {Login_investor, Login_landlord}

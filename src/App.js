@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Home from './components/pages/Home';
+import {Home, Home_investor} from './components/pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Login from './components/pages/Login';
+import { Login_investor, Login_landlord } from './components/pages/Login';
 import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
 import Faq from './components/pages/FAQ';
@@ -16,7 +16,9 @@ function App() {
       <Router>
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/login' component={Login} />
+          <Route path='/home-investor' exact component={Home_investor} />
+          <Route path='/login-landlord' component={Login_landlord} />
+          <Route path='/login-investor' component={Login_investor} />
           <Route path='/faq' component={Faq} />
           <Route path='/products' component={Products} />
           <Route path='/sign-up' component={SignUp} />
