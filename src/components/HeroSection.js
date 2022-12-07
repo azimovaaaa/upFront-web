@@ -9,7 +9,7 @@ function HeroSection() {
   return (
     <>
       <div className='hero-container'>
-        <video src='/videos/video-1.mp4' autoPlay loop muted />
+        {/* <video src='/videos/video-1.mp4' autoPlay loop muted /> */}
         
         <div className='text_1'>
           <h1>Transform rental contracts into upfront capital</h1>
