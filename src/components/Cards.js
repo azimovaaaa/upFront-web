@@ -43,15 +43,7 @@ function Cards() {
               path='/sign-up'
             />
           </ul>      
-          <div className='text_2'>
-            <h1>Eliminate tenant nonpayment risk</h1>
-            <p>Connect to UpFront and receive advanced proceeds without the wait or the risk.</p>
-            <p>Define payout on your own terms.</p>
-          </div>
         </div>
-      </div>
-      <div class='how'>
-        <img alt="How it works" src="images/howitworks.png" class="w-full"/>
       </div>
       
     </div>

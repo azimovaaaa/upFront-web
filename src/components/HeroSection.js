@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
-import Cards from './/Cards.js';
+// import Cards from './/Cards.js';
 
 
 function HeroSection() {
@@ -12,19 +12,30 @@ function HeroSection() {
         {/* <video src='/videos/video-1.mp4' autoPlay loop muted /> */}
         
         <div className='text_1'>
-          <h1>Transform rental contracts into upfront capital</h1>
+          <h1 class="txt-shine">Transform rental contracts into upfront capital</h1>
           <p>Built For Landlords To Gain Early Liquidity</p>
-          <div className='hero-btns'>
-            <Button className='btns'
-              buttonSize='btn--medium'
+          <Button className='btns'
+              buttonSize='btn--large'
               >
                 Get Started
             </Button>
-          </div>
         </div>
-      
       </div>
-      <Cards />
+      
+      <div className='hero-container2'>
+        <div className='text_2'>
+          <img alt="How it works" src="images/dash.png" class="w-full"/>
+            <h1>Eliminate tenant nonpayment risk</h1>
+            <p>Post your contracts on the UpFront marketplace and receive advanced proceeds instantly, without the wait or the risk.
+               Define payout on your own terms.</p>
+        </div>
+      </div>
+
+      <div className='hero-container3'>
+        <div class='how'>
+          <img alt="How it works" src="images/howitworks.png" class="w-full"/>
+        </div>
+      </div>
       
       <div className='text_3'>
         <h1>Benefits</h1>
@@ -37,11 +48,6 @@ function HeroSection() {
         
         </div>
       </div>
-      
-
-
-
-
     </>
     
 

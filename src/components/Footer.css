@@ -1,10 +1,12 @@
 .footer-container {
-  background-color: #242424;
-  padding: 4rem 0 2rem 0;
+  /* padding: 4rem 0 2rem 0; */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content:space-between;
+  
+  background-color: #fff;
+  padding-bottom: 3rem;
+
 }
 .footer2-container{
   background-color: transparent;
@@ -24,9 +26,6 @@
   margin-bottom: 1rem;
 }
 
-medium{
-  margin-left: 2rem;
-}
 .footer-subscription {
   display: inline-block;
   flex-direction: column;
@@ -41,9 +40,15 @@ medium{
 .fa-circle{
   margin-top: 15px;
   margin-left: 4px;
-  color: red;
-  font-size: 7px;
+  color: #ED8000;
+  font-size: 12px;
 }
+
+hr{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .footer-subscription > p {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
@@ -77,8 +82,31 @@ medium{
   justify-content: center;
 }
 
-.footer-link-wrapper {
+.footer-left {
+  display: block;
+  float: left;
+  margin-left: 20rem;
+  margin-top: 1.5rem;
+}
+
+.footer-left-link a {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 160px;
+  box-sizing: border-box;
+  color: #111;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 22px;
+}
+.footer-right {
+  display: flex;
+  float: right;
+  margin-right: 20rem;
+  margin-top: 1rem;
 }
 
 .footer-link-items {
@@ -91,18 +119,17 @@ medium{
   box-sizing: border-box;
 }
 
-.footer-link-items h2 {
-  margin-bottom: 16px;
-}
-
 .footer-link-items > h2 {
-  color: #fff;
+  margin-bottom: 16px;
+  color: #111;
+  font-size: 28px;
 }
 
 .footer-link-items a {
-  color: #fff;
+  color: #111;
   text-decoration: none;
   margin-bottom: 0.5rem;
+  font-size: 22px;
 }
 
 .footer-link-items a:hover {
@@ -156,21 +183,16 @@ medium{
 }
 
 .social-logo {
-  color: #fff;
+  color: #111;
   justify-self: start;
-  margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 3rem;
   display: flex;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.website-rights {
-  color: #fff;
-  margin-bottom: 16px;
-}
 
 @media screen and (max-width: 820px) {
   .footer-links {
