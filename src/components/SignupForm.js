@@ -1,5 +1,5 @@
-import React from "react";
-import "./SignupForm.css";
+import React from 'react';
+import './SignupForm.css';
 
 function SignupForm(props) {
     return (
