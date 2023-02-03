@@ -84,6 +84,7 @@ function SignupContainer() {
             <SignupForm
                 onSubmit={onSubmit}
                 onChange={onChange}
+                errors={errors}
                 firstName={firstName}
                 lastName={lastName}
                 email={email}

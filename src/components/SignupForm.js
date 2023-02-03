@@ -1,3 +1,4 @@
+import { toHaveErrorMessage } from '@testing-library/jest-dom/dist/matchers';
 import React from 'react';
 import './SignupForm.css';
 
@@ -31,6 +32,10 @@ function SignupForm(props) {
                         onChange={props.onChange}
                         />
                     </div>
+                    <div className="error">
+                        {props.errors.firstName && <p>{props.errors.firstName}</p>}
+                        {props.errors.lastName && <p>{props.errors.lastName}</p>}
+                    </div>
                     <div className="form-group mt-3">
                         <label>Email</label>
                         <input
@@ -42,6 +47,9 @@ function SignupForm(props) {
                         onChange={props.onChange}
                         />
                     </div>
+                    <div className="error">
+                        {props.errors.email && <p>{props.errors.email}</p>}
+                    </div>
                     <div className="form-group mt-3 pass">
                         <label>Password</label>
                         <input
@@ -52,8 +60,12 @@ function SignupForm(props) {
                         value={props.password}
                         onChange={props.onChange}
                         />
+                        <div className="error">
+                            {props.errors.password && <p>{props.errors.password}</p>}
+                        </div>
                         <p>Must be at least 8 characters</p>
                     </div>
+                    
                     <p className="registered">
                         {/* <a href="#">Forgot password?</a> */}
                         By continuing you agree to the UpFront <a href="/"> terms of service </a> and <a href="/"> privacy policy </a>. 
@@ -63,7 +75,9 @@ function SignupForm(props) {
                             Continue
                         </button>
                     </div>
-
+                    <div className="error">
+                        {props.errors.message && <p>{props.errors.message}</p>}
+                    </div>
                     <p className="registered">
                         {/* <a href="#">Forgot password?</a> */}
                         Already registered? <a href="/login">Sign in</a>

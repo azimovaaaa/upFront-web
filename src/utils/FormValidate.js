@@ -13,7 +13,7 @@ const validateSignUpForm = (payload) => {
         payload.firstName.trim().length === 0
     ) {
         isFormValid = false;
-        errors.firstName = "Please provide a user name.";
+        errors.firstName = 'Please provide a first name.';
     }
 
     if (
@@ -22,7 +22,7 @@ const validateSignUpForm = (payload) => {
         payload.lastName.trim().length === 0
     ) {
         isFormValid = false;
-        errors.lastName = "Please provide a user name.";
+        errors.lastName = 'Please provide a last name.';
     }
 
     if (
