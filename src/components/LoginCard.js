@@ -1,5 +1,7 @@
 import React from 'react';
 import './LoginCard.css';
+import { Link } from 'react-router-dom';
+
 
 function LoginCard() {
     return (
@@ -30,9 +32,10 @@ function LoginCard() {
                             </button>
                     </div>
 
-                    <p className="forgot-password">
+                    <div className="login-links">
                         <a href="#">Forgot password?</a>
-                    </p>
+                        <Link to='/sign-up'>Create new account</Link>
+                    </div>
                     
                 </div>
             </form>

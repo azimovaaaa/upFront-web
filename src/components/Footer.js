@@ -75,7 +75,7 @@ function Footer2() {
     <section class='footer2-container'>
         <div class='footer2-container-wrap'>
           <div class='footer-logo'>
-            <medium class='website-rights'>© UpFront LLC 2022</medium>
+            <small class='website-rights'>© UpFront LLC 2022</small>
           </div>
           <div class='footer2-btm-right'>
             <Link to='/'>Privacy Policy</Link>
