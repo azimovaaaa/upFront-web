@@ -19,12 +19,17 @@
 
 .nav-logo{
   display: fixed;
-  width: 30%;
+  width: 50%;
+  margin-left: 10%;
 }
 .fa-typo3 {
   margin-left: 0.5rem;
   font-size: 1.8rem;
 }
+a.navbar-logo {
+  width: 25%;
+}
+
 
 .nav-menu {
   display: grid;

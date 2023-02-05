@@ -85,7 +85,8 @@ hr{
 .footer-left {
   display: block;
   float: left;
-  margin-left: 20rem;
+  margin-left: 5rem;
+  margin-right: 25rem;
   margin-top: 1.5rem;
 }
 
@@ -100,12 +101,12 @@ hr{
   text-decoration: none;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  font-size: 22px;
+  font-size: 18px;
 }
 .footer-right {
   display: flex;
   float: right;
-  margin-right: 20rem;
+  margin-right: 3rem;
   margin-top: 1rem;
 }
 
@@ -122,14 +123,14 @@ hr{
 .footer-link-items > h2 {
   margin-bottom: 16px;
   color: #111;
-  font-size: 28px;
+  font-size: 22px;
 }
 
 .footer-link-items a {
   color: #111;
   text-decoration: none;
   margin-bottom: 0.5rem;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .footer-link-items a:hover {

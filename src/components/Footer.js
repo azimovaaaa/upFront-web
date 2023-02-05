@@ -37,7 +37,7 @@ function Footer() {
         <div class='footer-left-link'>
             <Link to='/'>Privacy Policy</Link>
             <Link to='/'>Terms of Service</Link>
-            <medium>© UpFront LLC 2022</medium>
+            <small>© UpFront LLC 2022</small>
           </div>
       </div>
 
