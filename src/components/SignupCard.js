@@ -1,8 +1,7 @@
-import { toHaveErrorMessage } from '@testing-library/jest-dom/dist/matchers';
 import React from 'react';
-import './SignupForm.css';
+import './SignupCard.css';
 
-function SignupForm(props) {
+function SignupCard(props) {
     return (
         <>
         <div className="Create-form-container">
@@ -90,4 +89,4 @@ function SignupForm(props) {
     )
 }
 
-export default SignupForm;
+export default SignupCard;

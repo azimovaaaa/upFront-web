@@ -1,41 +1,33 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { validateSignUpForm } from '../utils/FormValidate';
-import SignupCard from './SignupCard';
+import { validateLoginForm } from '../utils/FormValidate';
+import LoginCard from './LoginCard';
 
 // import "bootstrap/dist/css/bootstrap.min.css"
 
-function SignupContainer() {
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
+function LoginContiner() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [errors, setErrors] = useState({})
+    const [errors, setErrors] = useState({});
 
     const onChange = (event) => {
         const {name , value} = event.target;
         
-        if(name === 'firstName'){
-            setFirstName(value);
-        } else if(name === 'lastName'){
-            setLastName(value);
-        } else if(name === 'email'){
+        if(name === 'email'){
             setEmail(value);
         } else if(name === 'password'){
             setPassword(value);
         }
     }
 
-    const submitSignup = (userInfo) => {
+    const submitLogin = (userInfo) => {
         const params = {
-            firstName: userInfo.firstName,
-            lastName: userInfo.lastName,
             email: userInfo.email,
             password: userInfo.password
         };
 
         axios
-            .post('/api/signup', params)
+            .post('/api/login', params)
             .then(res => {
                 if (res.data.success === true) {
                     localStorage.token = res.data.token;
@@ -48,7 +40,7 @@ function SignupContainer() {
                 }
             })
             .catch(err => {
-                console.log("Sign up data submit error: ", err.message);
+                console.log("Login data submit error: ", err.message);
             });
     }
 
@@ -56,17 +48,15 @@ function SignupContainer() {
         event.preventDefault();
 
         const userInfo = {
-            firstName: firstName,
-            lastName: lastName,
             email: email,
             password: password
         };
 
-        const payload = validateSignUpForm(userInfo);
+        const payload = validateLoginForm(userInfo);
 
         if (payload.success) {
             setErrors({});
-            submitSignup(userInfo);
+            submitLogin(userInfo);
         } else {
             const newErrors = payload.errors;
             const message = payload.message;
@@ -80,12 +70,10 @@ function SignupContainer() {
 
     return (
         <div>
-            <SignupCard
+            <LoginCard
                 onSubmit={onSubmit}
                 onChange={onChange}
                 errors={errors}
-                firstName={firstName}
-                lastName={lastName}
                 email={email}
                 password={password}
             />
@@ -93,4 +81,4 @@ function SignupContainer() {
     )
 }
 
-export default SignupContainer;
+export default LoginContiner;
