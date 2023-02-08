@@ -54,6 +54,46 @@ const validateSignUpForm = (payload) => {
     };
 };
 
+<<<<<<< HEAD
 module.exports = {
     validateSignUpForm: validateSignUpForm
+=======
+const validateLoginForm = (payload) => {
+    const errors = {};
+    let message = '';
+    let isFormValid = true;
+
+    if (
+        !payload ||
+        typeof payload.email !== 'string' ||
+        !validator.isEmail(payload.email)
+    ) {
+        isFormValid = false;
+        errors.email = 'Please provide a valid email address.';
+    }
+
+    if (
+        !payload ||
+        typeof payload.password !== 'string' ||
+        payload.password.trim().length < 1
+    ) {
+        isFormValid = false;
+        errors.password = 'Please enter a password.';
+    }
+
+    if (!isFormValid) {
+        message = 'Please fix errors and try again.';
+    }
+
+    return {
+        success: isFormValid,
+        message,
+        errors
+    };
+}
+
+module.exports = {
+    validateSignUpForm: validateSignUpForm,
+    validateLoginForm: validateLoginForm
+>>>>>>> a7a6205b971b7cfeb01c4a158283d80f119c7e24
 };

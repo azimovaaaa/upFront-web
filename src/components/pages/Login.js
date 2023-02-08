@@ -1,15 +1,15 @@
 import React from 'react';
 import '../../App.css';
 import {Footer2} from '../Footer';
-import LoginCard from '../LoginCard';
 import {Navbar} from '../../components/Navbar';
+import LoginContiner from '../LoginContainer';
 
 
 function Login_landlord() {
   return(
     <>
       <Navbar />
-      <LoginCard />
+      <LoginContiner />
       <Footer2 />
     </>
   )
@@ -19,7 +19,7 @@ function Login_investor() {
   return(
     <>
       <Navbar />
-      <LoginCard />
+      <LoginContiner />
       <Footer2 />
     </>
   )
