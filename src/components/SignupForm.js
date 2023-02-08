@@ -1,14 +1,8 @@
 import { toHaveErrorMessage } from '@testing-library/jest-dom/dist/matchers';
 import React from 'react';
-<<<<<<< HEAD:src/components/SignupForm.js
 import './SignupForm.css';
 
 function SignupForm(props) {
-=======
-import './SignupCard.css';
-
-function SignupCard(props) {
->>>>>>> a7a6205b971b7cfeb01c4a158283d80f119c7e24:src/components/SignupCard.js
     return (
         <>
         <div className="Create-form-container">
@@ -96,8 +90,4 @@ function SignupCard(props) {
     )
 }
 
-<<<<<<< HEAD:src/components/SignupForm.js
 export default SignupForm;
-=======
-export default SignupCard;
->>>>>>> a7a6205b971b7cfeb01c4a158283d80f119c7e24:src/components/SignupCard.js

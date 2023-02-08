@@ -54,10 +54,6 @@ const validateSignUpForm = (payload) => {
     };
 };
 
-<<<<<<< HEAD
-module.exports = {
-    validateSignUpForm: validateSignUpForm
-=======
 const validateLoginForm = (payload) => {
     const errors = {};
     let message = '';
@@ -95,5 +91,4 @@ const validateLoginForm = (payload) => {
 module.exports = {
     validateSignUpForm: validateSignUpForm,
     validateLoginForm: validateLoginForm
->>>>>>> a7a6205b971b7cfeb01c4a158283d80f119c7e24
 };

@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-<<<<<<< HEAD
+import { validateSignUpForm } from '../utils/FormValidate';
 import SignupForm from './SignupForm';
-import { validateSignUpForm } from '../utils/FormValidate';
-=======
-import { validateSignUpForm } from '../utils/FormValidate';
-import SignupCard from './SignupCard';
->>>>>>> a7a6205b971b7cfeb01c4a158283d80f119c7e24
 
 // import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -80,20 +75,12 @@ function SignupContainer() {
                 message: message
             });
             console.log('Signup form errors: ', errors);
-<<<<<<< HEAD
-            /* TODO: represent these errors in the UI */
-=======
->>>>>>> a7a6205b971b7cfeb01c4a158283d80f119c7e24
         }
     }
 
     return (
         <div>
-<<<<<<< HEAD
             <SignupForm
-=======
-            <SignupCard
->>>>>>> a7a6205b971b7cfeb01c4a158283d80f119c7e24
                 onSubmit={onSubmit}
                 onChange={onChange}
                 errors={errors}
