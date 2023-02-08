@@ -35,6 +35,10 @@ label {
     color: white;
     display: inline-block;
 }
+
+.error {
+    color: red;
+}
   
 .Auth-form-content > h1{
     font-size: 29px;

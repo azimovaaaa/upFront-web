@@ -37,6 +37,10 @@ label {
     color: white;
     display: inline-block;
 }
+
+.error {
+    color: red;
+}
   
 .Create-form-content > p{
     font-size: 14px;
