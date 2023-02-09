@@ -80,7 +80,7 @@ function SignupForm(props) {
                     </div>
                     <p className="registered">
                         {/* <a href="#">Forgot password?</a> */}
-                        Already registered? <a href="/login">Sign in</a>
+                        Already registered? <a href="/login-landlord">Sign in</a>
                     </p>
                     
                 </div>

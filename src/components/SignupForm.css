@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 70vh;
+    /* height: 70vh; */
     background-color: black;
     margin-top: 4rem;
     margin-bottom: 2rem;
@@ -16,6 +16,7 @@
     padding-bottom: 20px;
     border-radius: 8px;
     background-color: #242424;
+    height: 100%;
 }
   
 .Create-form-content {
@@ -47,6 +48,9 @@ label {
     color: white;
     line-height: 1rem;
     margin-bottom: 2rem;
+    margin-left: -1rem;
+    margin-right: auto;
+    text-align: left;
 }
 
 .Create-form-content a {
@@ -92,6 +96,7 @@ label {
 .d-grid {
     display: grid!important;
     margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .cont-button .btn {
