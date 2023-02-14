@@ -22,7 +22,7 @@ function App() {
           <Route path='/faq' component={Faq} />
           <Route path='/products' component={Products} />
           <Route path='/sign-up' component={SignUp} />
-          <Route path='/landlord-home' component={Landlord} />
+          <Route path='/landlord-connect' component={Landlord} />
           <Route path='/landlord-marketplace' component={Lmarketplace} />
           <Route path='/landlord-dashboard' component={Ldashboard} />
 

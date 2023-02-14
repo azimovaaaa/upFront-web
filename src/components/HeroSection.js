@@ -24,7 +24,7 @@ function HeroSection() {
       
       <div className='hero-container2'>
         <div className='text_2'>
-          <img alt="How it works" src="images/dash.png" class="w-full"/>
+          <img alt="How it works" src="images/LL-laptop-homepage.png" class="w-full"/>
             <h1>Eliminate tenant nonpayment risk</h1>
             <p>Post your contracts on the UpFront marketplace and receive advanced proceeds instantly, without the wait or the risk.
                Define payout on your own terms.</p>

@@ -24,7 +24,7 @@ function HeroSectionInv() {
       
       <div className='hero-container2'>
         <div className='text_2'>
-          <img alt="How it works" src="images/dash.png" class="w-full"/>
+          <img alt="How it works" src="images/Inv-homepage-laptop.png" class="w-full"/>
           <h1>Set your criteria and invest on your terms</h1>
           <p>Enter your target risk profile then choose the rental contracts that fit your criteria and match your goals.</p>
         </div>

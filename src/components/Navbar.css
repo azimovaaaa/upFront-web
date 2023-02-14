@@ -19,9 +19,18 @@
 
 .nav-logo{
   display: fixed;
-  width: 50%;
-  margin-left: 10%;
+  width: 60%;
+  /* margin-left: 10%; */
+  margin-bottom: -1rem;
 }
+
+.nav2-logo{
+  display: fixed;
+  width: 42%;
+  margin-left: 5%;
+  margin-bottom: -1rem;
+}
+
 .fa-typo3 {
   margin-left: 0.5rem;
   font-size: 1.8rem;

@@ -27,10 +27,9 @@ function Footer() {
       </section> */}
       <div className='footer-left'>
         <div class='footer-logo'>
-            <Link to='/' className='social-logo'>
-              upfront
-              <i class="fa-solid fa-circle"></i>
-            </Link>
+          <Link to='/'>
+            <img alt="upfront logo" src="images/logo2.png" class="footer-logo"/>
+          </Link>
         </div>
         <h2>The marketplace for landlords to get early liquidity</h2>
         <hr></hr>
