@@ -16,25 +16,25 @@ function Connect() {
 
             <div className='providers'>
             <a href = "https://www.yardi.com/">
-                <img alt="upfront logo" src="images/logo2.png" class="footer-logo"/>
+                <img alt="upfront logo" src="images/Yardi-logo.png" class="footer-logo"/>
              </a>
              <a href = "https://www.realpage.com/">
-                <img alt="upfront logo" src="images/logo2.png" class="footer-logo"/>
+                <img alt="upfront logo" src="images/realpage-logo.png" class="footer-logo"/>
              </a>
              <a href = "https://www.entrata.com/">
-                <img alt="upfront logo" src="images/logo2.png" class="footer-logo"/>
+                <img alt="upfront logo" src="images/entrata-logo.png" class="footer-logo"/>
              </a>
              <a href = "https://myresman.com/">
-                <img alt="upfront logo" src="images/logo2.png" class="footer-logo"/>
+                <img alt="upfront logo" src="images/resman-logo.png" class="footer-logo"/>
              </a>
              <a href = "https://www.appfolio.com/">
-                <img alt="upfront logo" src="images/logo2.png" class="footer-logo"/>
+                <img alt="upfront logo" src="images/appfolio-logo.png" class="footer-logo"/>
              </a>
              <a href = "https://www.buildium.com/">
-                <img alt="upfront logo" src="images/logo2.png" class="footer-logo"/>
+                <img alt="upfront logo" src="images/buildium-logo.png" class="footer-logo"/>
              </a>
              <Link to='/'>
-                <img alt="upfront logo" src="images/logo2.png" class="footer-logo"/>
+                <img alt="upfront logo" src="images/manual-logo.png" class="footer-logo"/>
              </Link>
              
         </div>
