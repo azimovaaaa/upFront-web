@@ -88,7 +88,51 @@ const validateLoginForm = (payload) => {
     };
 }
 
+const validateLearnMore = (payload) => {
+    const errors = {};
+    let message = '';
+    let isFormValid = true;
+
+    if (
+        !payload ||
+        typeof payload.firstName !== 'string' ||
+        payload.firstName.trim().length === 0
+    ) {
+        isFormValid = false;
+        errors.firstName = 'Please provide a first name.';
+    }
+
+    if (
+        !payload ||
+        typeof payload.lastName !== 'string' ||
+        payload.lastName.trim().length === 0
+    ) {
+        isFormValid = false;
+        errors.lastName = 'Please provide a last name.';
+    }
+
+    if (
+        !payload ||
+        typeof payload.email !== 'string' ||
+        !validator.isEmail(payload.email)
+    ) {
+        isFormValid = false;
+        errors.email = 'Please provide a valid email address.';
+    }
+
+    if (!isFormValid) {
+        message = 'Please fix errors and try again.';
+    }
+
+    return {
+        success: isFormValid,
+        message,
+        errors
+    };
+}
+
 module.exports = {
     validateSignUpForm: validateSignUpForm,
-    validateLoginForm: validateLoginForm
+    validateLoginForm: validateLoginForm,
+    validateLearnMore: validateLearnMore
 };

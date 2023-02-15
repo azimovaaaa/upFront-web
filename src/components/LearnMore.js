@@ -1,17 +1,15 @@
 import React from 'react';
 import '../App.css';
 import {Footer2} from './Footer';
-import SignupContainer from './SignupContainer';
 import {Navbar} from './Navbar';
 import './LearnMore.css';
 
-export default function LearnMore() {
+export default function LearnMore(props) {
   return(
     <>
       <Navbar />
       <div className="LearnMore-form-container">
-            {/* <form className="Create-form" onSubmit={props.onSubmit}> */}
-            <form className="LearnMore-form">
+            <form className="LearnMore-form" onSubmit={props.onSubmit}>
                 <div className="LearnMore-form-content">
                     <h1 className="LearnMore-form-title">Sign Up</h1>
                     <p>to learn more about UpFront and recieve a demo video.</p>
@@ -25,21 +23,21 @@ export default function LearnMore() {
                         className="form-control mt-1"
                         placeholder="Enter First name"
                         name="firstName"
-                        // value={props.firstName}
-                        // onChange={props.onChange}
+                        value={props.firstName}
+                        onChange={props.onChange}
                         />
                         <input
                         type="last"
                         className="form-control mt-1"
                         placeholder="Enter Last name"
                         name="lastName"
-                        // value={props.lastName}
-                        // onChange={props.onChange}
+                        value={props.lastName}
+                        onChange={props.onChange}
                         />
                     </div>
                     <div className="error">
-                        {/* {props.errors.firstName && <p>{props.errors.firstName}</p>}
-                        {props.errors.lastName && <p>{props.errors.lastName}</p>} */}
+                        {props.errors.firstName && <p>{props.errors.firstName}</p>}
+                        {props.errors.lastName && <p>{props.errors.lastName}</p>}
                     </div>
                     <div className="form-group mt-3">
                         <label>Email</label>
@@ -48,12 +46,12 @@ export default function LearnMore() {
                         className="form-control mt-1"
                         placeholder="Enter email"
                         name="email"
-                        // value={props.email}
-                        // onChange={props.onChange}
+                        value={props.email}
+                        onChange={props.onChange}
                         />
                     </div>
                     <div className="error">
-                        {/* {props.errors.email && <p>{props.errors.email}</p>} */}
+                        {props.errors.email && <p>{props.errors.email}</p>}
                     </div>
                     
                     
@@ -64,7 +62,7 @@ export default function LearnMore() {
                     </div>
     
                     <div className="error">
-                        {/* {props.errors.message && <p>{props.errors.message}</p>} */}
+                        {props.errors.message && <p>{props.errors.message}</p>}
                     </div>
                     
                     
@@ -75,5 +73,3 @@ export default function LearnMore() {
     </>
   )
 }
-
-
