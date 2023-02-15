@@ -9,6 +9,7 @@ import Faq from './components/pages/FAQ';
 import Landlord from './components/pages/Landlord';
 import Lmarketplace from './components/pages/Lmarketplace';
 import Ldashboard from './components/pages/Ldashboard';
+import LearnMore from './components/LearnMore';
 
 function App() {
   return (
@@ -21,10 +22,11 @@ function App() {
           <Route path='/login-investor' component={Login_investor} />
           <Route path='/faq' component={Faq} />
           <Route path='/products' component={Products} />
-          <Route path='/sign-up' component={SignUp} />
+          <Route path='/sign-up' component={LearnMore} />
           <Route path='/landlord-connect' component={Landlord} />
           <Route path='/landlord-marketplace' component={Lmarketplace} />
           <Route path='/landlord-dashboard' component={Ldashboard} />
+          <Route path='/signup' component={SignUp} />
 
 
         </Switch>

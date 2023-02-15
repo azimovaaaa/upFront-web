@@ -40,7 +40,7 @@ function LoginCard(props) {
                     </div>
                     <div className="d-grid gap-2 mt-3 button">
                             <button type="submit" className="btn btn-primary">
-                                Submit
+                                Sign In
                             </button>
                     </div>
 

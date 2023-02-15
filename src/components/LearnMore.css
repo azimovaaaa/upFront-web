@@ -1,0 +1,53 @@
+.LearnMore-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 70vh;
+    background-color: black;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.LearnMore-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 70vh;
+    background-color: black;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.LearnMore-form {
+    width: 620px;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    background-color: #242424;
+    /* height: 100%; */
+}
+
+.LearnMore-form-content {
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.LearnMore-form-title{
+    text-align: left;
+    margin-bottom: 0.2rem;
+    font-size: 30px;
+    color: white;
+    font-weight: 800;
+}
+.LearnMore-form-content > p{
+    font-size: 18px;
+    color: white;
+    line-height: 1rem;
+    margin-bottom: 2rem;
+    margin-left: -1rem;
+    margin-right: auto;
+    text-align: left;
+}
