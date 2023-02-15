@@ -43,7 +43,7 @@ function HeroSectionInv() {
         
         <div className='text_3-btns'>
           <Button>
-            Get Started
+            Join our Mailing List to Stay in Touch
           </Button>
         
         </div>

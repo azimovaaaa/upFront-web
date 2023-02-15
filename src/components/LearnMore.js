@@ -69,7 +69,6 @@ export default function LearnMore(props) {
                 </div>
             </form>
         </div>
-      <Footer2 />
     </>
   )
 }

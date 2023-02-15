@@ -18,7 +18,7 @@ function HeroSection() {
               buttonSize='btn--large'
               >
                 Join our Mailing List to Stay in Touch
-            </Button>
+          </Button>
         </div>
       </div>
       
@@ -43,7 +43,7 @@ function HeroSection() {
         
         <div className='text_3-btns'>
           <Button>
-            Get Started
+            Join our Mailing List to Stay in Touch
           </Button>
         
         </div>
