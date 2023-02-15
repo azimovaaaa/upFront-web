@@ -45,15 +45,15 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>Products</h2>
-            <Link to='/'>For Landlords</Link>
-            <Link to='/'>For Investors</Link>
+            <Link to='/sign-up'>For Landlords</Link>
+            <Link to='/sign-up'>For Investors</Link>
           </div>
         </div>
 
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>Company</h2>
-            <Link to='/sign-up'>About</Link>
+            <Link to='/'>About</Link>
             <Link to='/'>Careers</Link>
             <Link to='/'>FAQ</Link>
             <Link to='/'>Contact</Link>

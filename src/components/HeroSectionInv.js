@@ -17,7 +17,7 @@ function HeroSectionInv() {
           <Button className='btns'
               buttonSize='btn--large'
               >
-                Get Started
+                Join our Mailing List to Stay in Touch
             </Button>
         </div>
       </div>
