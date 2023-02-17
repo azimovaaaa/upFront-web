@@ -7,12 +7,14 @@ import './LearnMore.css';
 export default function LearnMore(props) {
   return(
     <>
-      <Navbar />
-      <div className="LearnMore-form-container">
+        <Navbar />
+        <div className="LearnMore-form-container">
+            {props.success && <h1 className="LearnMore-form-title">Your information was submitted successfully.</h1>}
+            {!props.success &&
             <form className="LearnMore-form" onSubmit={props.onSubmit}>
                 <div className="LearnMore-form-content">
                     <h1 className="LearnMore-form-title">Sign Up</h1>
-                    <p>to learn more about UpFront and recieve a demo video.</p>
+                    <p>Learn more about UpFront and recieve a demo video.</p>
                     <div className="name">
                         <label>First Name</label>
                         <label>Last Name</label>
@@ -64,10 +66,8 @@ export default function LearnMore(props) {
                     <div className="error">
                         {props.errors.message && <p>{props.errors.message}</p>}
                     </div>
-                    
-                    
                 </div>
-            </form>
+            </form>}
         </div>
     </>
   )

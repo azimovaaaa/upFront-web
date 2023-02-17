@@ -27,8 +27,6 @@ function App() {
           <Route path='/landlord-marketplace' component={Lmarketplace} />
           <Route path='/landlord-dashboard' component={Ldashboard} />
           <Route path='/sign-up' component={SignUp} />
-
-
         </Switch>
       </Router>
     </>

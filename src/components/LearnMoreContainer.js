@@ -9,7 +9,8 @@ function LearnMoreContainer() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
-    const [errors, setErrors] = useState({})
+    const [errors, setErrors] = useState({});
+    const [success, setSuccess] = useState(false);
 
     const onChange = (event) => {
         const {name , value} = event.target;
@@ -31,17 +32,18 @@ function LearnMoreContainer() {
         };
 
         axios
-            .post('/api/learn-more', params)
+            .post('tenant/api/learn-more', params)
             .then(res => {
-                if (res.data.success === true) {
+                if (res.status == 201) {
                     /* TODO: update page to remove inputs */
+                    setSuccess(true);
                     setErrors({
                         message: "Your information was submitted successfully."
-                    })
+                    });
                 } else {
                     setErrors({
-                        message: res.data.message
-                    })
+                        message: "There was an error."
+                    });
                 }
             })
             .catch(err => {
@@ -83,6 +85,7 @@ function LearnMoreContainer() {
                 firstName={firstName}
                 lastName={lastName}
                 email={email}
+                success={success}
             />
         </div>
     )
