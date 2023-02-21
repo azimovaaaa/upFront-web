@@ -55,6 +55,20 @@ export default function LearnMore(props) {
                     <div className="error">
                         {props.errors.email && <p>{props.errors.email}</p>}
                     </div>
+                    <div className="form-group mt-3">
+                        <label>Phone Number</label>
+                        <input
+                        type="text"
+                        className="form-control mt-1"
+                        placeholder="Enter phone number (optional)"
+                        name="phone"
+                        value={props.phone}
+                        onChange={props.onChange}
+                        />
+                    </div>
+                    <div className="error">
+                        {props.errors.phone && <p>{props.errors.phone}</p>}
+                    </div>
                     
                     
                     <div className="d-grid gap-2 mt-3 button">

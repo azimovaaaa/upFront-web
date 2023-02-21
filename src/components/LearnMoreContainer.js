@@ -9,18 +9,21 @@ function LearnMoreContainer() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
     const [errors, setErrors] = useState({});
     const [success, setSuccess] = useState(false);
 
     const onChange = (event) => {
         const {name , value} = event.target;
         
-        if(name === 'firstName'){
+        if(name === 'firstName') {
             setFirstName(value);
-        } else if(name === 'lastName'){
+        } else if(name === 'lastName') {
             setLastName(value);
-        } else if(name === 'email'){
+        } else if(name === 'email') {
             setEmail(value);
+        } else if (name === 'phone') {
+            setPhone(value);
         }
     }
 
@@ -28,11 +31,12 @@ function LearnMoreContainer() {
         const params = {
             firstName: userInfo.firstName,
             lastName: userInfo.lastName,
-            email: userInfo.email
+            email: userInfo.email,
+            phone: userInfo.phone
         };
 
         axios
-            .post('tenant/api/learn-more', params)
+            .post('http://ec2-54-85-137-172.compute-1.amazonaws.com:8000/tenant/api/learn-more', params)
             .then(res => {
                 if (res.status == 201) {
                     /* TODO: update page to remove inputs */
@@ -57,7 +61,8 @@ function LearnMoreContainer() {
         const userInfo = {
             firstName: firstName,
             lastName: lastName,
-            email: email
+            email: email,
+            phone: phone
         };
 
         const payload = validateLearnMore(userInfo);
@@ -85,6 +90,7 @@ function LearnMoreContainer() {
                 firstName={firstName}
                 lastName={lastName}
                 email={email}
+                phone={phone}
                 success={success}
             />
         </div>
