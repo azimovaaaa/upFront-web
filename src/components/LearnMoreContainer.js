@@ -36,7 +36,7 @@ function LearnMoreContainer() {
         };
 
         axios
-            .post('http://ec2-54-85-137-172.compute-1.amazonaws.com:8000/tenant/api/learn-more', params)
+            .post('http://54.158.130.10:8000/tenant/api/learn-more', params)
             .then(res => {
                 if (res.status == 201) {
                     /* TODO: update page to remove inputs */
