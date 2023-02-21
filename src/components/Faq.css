@@ -29,7 +29,7 @@ details[open] summary {
     margin-bottom: .5em;
 }
 summary::marker {
-    color: #175891;
+    color: #ED8000;
     position: right;
 }
 
@@ -55,13 +55,13 @@ summary::marker {
     border: none;
     cursor: pointer;
     color:white;
-    background-color: #175891;
+    background-color: #ED8000;
 }
   
 .faq-filter button:hover {
     
     transition: all 0.3s ease-out;
-    background: #96bddfd1;
+    background: #ac6803d1;
     color: white;
     transition: 250ms;
     /* color: #ff4e4e; */

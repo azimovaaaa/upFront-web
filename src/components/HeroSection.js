@@ -12,8 +12,8 @@ function HeroSection() {
         {/* <video src='/videos/video-1.mp4' autoPlay loop muted /> */}
         
         <div className='text_1'>
-          <h1 class="txt-shine">Transform rental contracts into upfront capital</h1>
-          <p>Built For Landlords To Gain Early Liquidity</p>
+          <h1 class="txt-shine">Transform rent contracts into upfront capital</h1>
+          <p>Built for landlords, property owners, and property managers to access early liquidity – unlock the value of your rental income streams immediately</p>
           <Button className='btns'
               buttonSize='btn--large'
               >
@@ -26,8 +26,7 @@ function HeroSection() {
         <div className='text_2'>
           <img alt="How it works" src="images/LL-laptop-homepage.png" class="w-full"/>
             <h1>Eliminate tenant nonpayment risk</h1>
-            <p>Post your contracts on the UpFront marketplace and receive advanced proceeds instantly, without the wait or the risk.
-               Define payout on your own terms.</p>
+            <p>Post your contracts on the UpFront marketplace and receive offers for advanced proceeds, eliminating the wait and risk. Define payout on your own terms.</p>
         </div>
       </div>
 
@@ -39,7 +38,7 @@ function HeroSection() {
       
       <div className='text_3'>
         <h1>Benefits</h1>
-        <p>Turn your monthly rental income into instant capital, by removing resident nonpayment risk, while providing a new form of liquidity without taking on debt. Connect your systems and see how much capital you can access today.</p>
+        <p>Access low-cost non-debt and non-dilutive net working capital immediately for maintenance and repair, financing property acquisitions, or any day-to-day cash needs. Connect your systems and see how much capital you can access today.</p>
         
         <div className='text_3-btns'>
           <Button>

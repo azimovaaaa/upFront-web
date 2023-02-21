@@ -1,6 +1,6 @@
 .hero-container {
   /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -31,7 +31,7 @@
 .text_1 > h1{
   text-align: center;
   color:white;
-  font-size: 5vw;
+  font-size: 4vw;
   width: fit-content;
   overflow: hidden;
   margin-right: auto;
@@ -95,7 +95,7 @@ p{
 .text_3 > h1{
   font-size: 4vw;
   color: #fff;
-  margin-top: 18rem;
+  margin-top: 8rem;
   margin-bottom: 2rem;
 }
 

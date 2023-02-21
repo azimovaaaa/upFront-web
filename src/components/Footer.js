@@ -31,7 +31,7 @@ function Footer() {
             <img alt="upfront logo" src="images/logo2.png" class="footer-logo"/>
           </Link>
         </div>
-        <h2>The marketplace for landlords to get early liquidity</h2>
+        <h2>Creative financing for the modern landlord</h2>
         <hr></hr>
         <div class='footer-left-link'>
             <Link to='/'>Privacy Policy</Link>
