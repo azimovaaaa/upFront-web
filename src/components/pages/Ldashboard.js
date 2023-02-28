@@ -14,21 +14,21 @@ export default function Ldashboard() {
           <ul className='dash__items'>
             <div className='prop'>
               <div className='prop-info'>
-                <h2>Contracts Outstanding</h2>
+                <p>Contracts Outstanding</p>
                 <h1>--</h1>
               </div>
             </div>
 
             <div className='prop'>
               <div className='prop-info'>
-                <h2>Average Percent Discount</h2>
+                <p>Average Percent Received</p>
                 <h1>--</h1>
               </div>
             </div>
 
             <div className='prop'>
               <div className='prop-info'>
-                <h2>Target IRR</h2>
+                <p>Target IRR</p>
                 <h1>--</h1>
               </div>
             </div>
@@ -36,22 +36,25 @@ export default function Ldashboard() {
           <ul className='dash__items'>
             <div className='prop'>
               <div className='prop-info'>
-                <h2>Contracts not on the marketplace</h2>
+                <p>Contracts Not on Marketplace</p>
                 <h1>--</h1>
               </div>
             </div>
             <div className='prop'>
               <div className='prop-info'>
-                <h2>Metric</h2>
+                <p>Total Contracts Completed</p>
+                <h1>--</h1>
               </div>
             </div>
             <div className='prop'>
               <div className='prop-info'>
-                <h2>Metric</h2>
+                <p>ROI</p>
+                <h1>--</h1>
               </div>
             </div>
+            
           </ul>      
-          <ul className='dash__items'>
+          {/* <ul className='dash__items'>
             <div className='prop'>
               <div className='prop-info'>
                 <h2>Property Location Heatmap</h2>
@@ -61,6 +64,27 @@ export default function Ldashboard() {
             <div className='prop'>
               <div className='prop-info'>
                 <h2>Tenants that paid on time</h2>
+                <h1>--</h1>
+              </div>
+            </div>
+          </ul> */}
+          
+        </div>
+
+
+
+        <div className='dash__wrapper'>
+               
+          <ul className='dash__items'>
+            <div className='prop'>
+              <div className='prop-info-right'>
+                <p>Property Location Heatmap</p>
+                <h1>--</h1>
+              </div>
+            </div>
+            <div className='prop'>
+              <div className='prop-info-right'>
+                <p>Tenants that paid on time</p>
                 <h1>--</h1>
               </div>
             </div>

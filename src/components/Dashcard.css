@@ -84,8 +84,8 @@ h1 {
 
 .dash__container {
   display: flex;
-  flex-flow: column;
-  align-items: center;
+  flex-flow: row;
+  /* align-items: center; */
   /* max-width: 1120px; */
   width: 80%;
   margin: 0 auto;
@@ -127,7 +127,7 @@ h1 {
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
   -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
   filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
   text-decoration: none;
   background-color: #ffffff;
@@ -186,16 +186,41 @@ h1 {
   height: 12rem;
 }
 .prop-info {
-  padding: 20px 30px 30px;
+  padding: 0px 30px 30px;
   color:black;
-  height: 12rem;
-}
-.prop-info >h1{
-  font-size: 80px;
-  color:black;
-  float:right;
+  height: 5rem;
 }
 
+.prop-info-right {
+  padding: 0px 30px 30px;
+  color:black;
+  height: 11.5rem;
+}
+.prop-info-right > p {
+  font-size: 15px;
+  color:black;
+  text-align: center;
+  padding: 0rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: 10px;
+}
+.prop-info >h1{
+  font-size: 30px;
+  color:black;
+  float:center;
+}
+.prop-info >p{
+  font-size: 12px;
+  color:black;
+  text-align: center;
+  padding: 0rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: 10px;
+}
 .dash__item__text {
   color: #252e48;
   font-size: 23px;
