@@ -12,25 +12,6 @@ h1 {
   display: block;
 }
 
-
-/* .text_2 > h1{
-  margin-top: 8rem;
-  text-align: center;
-  font-size: 60px;
-  margin-bottom: 1rem;
-}
-
-.text_2 > p{
-  display: block;
-  text-align: center;
-  font-size: 28px;
-  color: #ff4e4e;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-
-} */
-
 .w-full{
   width:80%;
   display: block;
@@ -85,8 +66,6 @@ h1 {
 .dash__container {
   display: flex;
   flex-flow: row;
-  /* align-items: center; */
-  /* max-width: 1120px; */
   width: 80%;
   margin: 0 auto;
 }
@@ -142,10 +121,10 @@ h1 {
   overflow: hidden;
 }
 
-.fade-img {
+/* .fade-img {
   animation-name: fade-img;
   animation-duration: 2s;
-}
+} */
 
 .dash__item__pic-wrap::after {
   content: attr(data-category);
@@ -186,7 +165,7 @@ h1 {
   height: 12rem;
 }
 .prop-info {
-  padding: 0px 30px 30px;
+  padding: 0px 0px 30px;
   color:black;
   height: 5rem;
 }
@@ -198,7 +177,7 @@ h1 {
 }
 .prop-info-right > p {
   font-size: 15px;
-  color:black;
+  color: black;
   text-align: center;
   padding: 0rem;
   margin-left: auto;
@@ -227,6 +206,64 @@ h1 {
   line-height: 24px;
 }
 
+.market_dash__container {
+  display: flex;
+  flex-flow: row;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.market_prop{
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  text-decoration: none;
+  background-color: black;
+  flex: 1 1;
+  margin: 0 1rem;
+}
+
+.market_prop_info {
+  padding: 0px 0px 30px;
+  color:black;
+  height: 7rem;
+}
+
+.market_prop_info >p {
+    font-size: 12px;
+    color: black;
+    text-align: center;
+    padding: 0rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: 10px;
+}
+.market_prop_info_right > h1 {
+  text-align: right;
+}
+.market_prop_info_right > p {
+  font-size: 19px;
+  color: #AEAEAE;
+  text-align: right;
+  padding: 0rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: 10px;
+}
+
+.post-bttn{
+  text-align: right;
+  padding: 12px 0px 0px 0px;
+}
+.btn {
+  background-color: #ED8000;
+  border-radius: 15px;
+  color: white;
+}
 @media only screen and (min-width: 1200px) {
   .content__blog__container {
     width: 84%;
