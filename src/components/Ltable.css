@@ -3,10 +3,11 @@
     text-align: left;
     margin-left:5%; 
     margin-right:5%;
-    overflow-y: auto;
+    overflow-y: scroll;
     height: 500px;
     margin-bottom: 3rem;
 }
+
 table.dash-table {
     color: white;
     column-gap: 40px;    
@@ -27,3 +28,20 @@ th, td {
 
 }
 
+
+.expand {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }

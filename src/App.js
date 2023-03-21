@@ -10,6 +10,7 @@ import Landlord from './components/pages/Landlord';
 import Lmarketplace from './components/pages/Lmarketplace';
 import Ldashboard from './components/pages/Ldashboard';
 import LearnMoreContainer from './components/LearnMoreContainer';
+import Manual from './components/Manual';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path='/landlord-marketplace' component={Lmarketplace} />
           <Route path='/landlord-dashboard' component={Ldashboard} />
           <Route path='/sign-up' component={SignUp} />
+          <Route path='/manual-upload' component={Manual} />
 
 
         </Switch>

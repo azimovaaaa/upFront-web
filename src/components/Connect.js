@@ -33,7 +33,7 @@ function Connect() {
              <a href = "https://www.buildium.com/">
                 <img alt="upfront logo" src="images/buildium-logo.png" class="footer-logo"/>
              </a>
-             <Link to='/'>
+             <Link to='/manual-upload'>
                 <img alt="upfront logo" src="images/manual-logo.png" class="footer-logo"/>
              </Link>
              

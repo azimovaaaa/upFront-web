@@ -1,0 +1,106 @@
+.manual-container{
+    display: flex;
+    flex-flow: column;
+    margin-left: 3rem;
+    margin-bottom: 4rem;
+    margin: 35px 70px 0px;
+}
+
+.manual-heading > h1{
+    text-align: left;
+    position: relative;
+}
+.heading {
+    display: flex;
+    flex-flow: row;
+    width: 90%;
+}
+
+.template-bttn{
+    text-align: right;
+    position: absolute;
+    right: 70px;
+    /* padding: 12px 0px 0px 0px; */
+  }
+  .btn {
+    background-color: #ED8000;
+    border-radius: 15px;
+    color: white;
+  }
+
+.area {
+    width: 100%;
+    height: 12vh;
+    position: relative;
+    /* border: 4px dashed #000; */
+    border-radius: 7px;
+    background-color: white;
+    /* background-image: url("https://img.icons8.com/dotty/512/upload.png"); */
+    content: "Click or drag to upload template with your customers filled in";
+    color: red;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 64px 64px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    filter: alpha(opacity=50);
+    /* -khtml-opacity: 0.5;
+    -moz-opacity: 0.5;
+    opacity: 0.5; */
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.area:hover,
+.area.dragging,
+.area.uploading {
+    filter: alpha(opacity=100);
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+}
+
+.area input {
+    width: 400%;
+    height: 100%;
+    margin-left: -300%;
+    border: none;
+    cursor: pointer;
+}
+
+.area input:focus {
+    outline: none;
+}
+
+
+.manual-table{
+    position: relative;
+    text-align: left;
+    margin-left:5%; 
+    margin-right:5%;
+    overflow-y: scroll;
+    height: 444px;
+}
+
+table.upload-table {
+    color: white;
+    column-gap: 40px;    
+    overflow-y:auto;
+    width: 100%;
+    font-size: 18px;
+}
+
+.manual-table thead th {
+    position: sticky; 
+    top: 0px; 
+    background-color: black;
+    color: #AEAEAE;
+}
+
+
+th, td {
+    padding: 5px 10px 5px 10px;
+    border-bottom:1pt solid white;
+
+}

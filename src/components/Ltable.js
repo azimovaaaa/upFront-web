@@ -1,6 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import './Ltable.css';
 
+
+var coll = document.getElementsByClassName("expand");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
 function Table_dash() {
 
   return (
@@ -28,8 +44,10 @@ function Table_dash() {
                 <td>Occupied</td>
                 <td>$24,320</td>
                 <td>$24,320</td>
-                <td><i class="fa-sharp fa-regular fa-square-plus"></i></td>
-                
+                <td><button class="expand"><i class="fa-sharp fa-regular fa-square-plus"></i></button></td>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
             </tr>
             <tr>
                 <td>191 Claremont Ave</td>
@@ -232,6 +250,7 @@ function Table_dash() {
     </>
   );
 };
+
 
 
 function Table_market() {
@@ -476,8 +495,12 @@ function Table_market() {
                     <td>Empty</td>
                     <td>$24,320</td>
                     <td>$24,320</td>
-                    <td><i class="fa-sharp fa-regular fa-square-plus"></i></td>
+                    <tr onclick="showHideRow('hidden_row1');">
+                        <td><i class="fa-sharp fa-regular fa-square-plus"></i></td>
+                    </tr>
+                    
                 </tr>
+                
             </tbody>
             
             </table>
@@ -485,7 +508,9 @@ function Table_market() {
          </div>
         </>
       );
-}
+}; 
+
+
 
 
 export {Table_dash, Table_market};
