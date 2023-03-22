@@ -1,0 +1,12 @@
+.map-container {
+  background-color: black;
+}
+
+.leaflet-marker-icon {
+  filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(215deg) brightness(100%);
+}
+
+.leaflet-popup-content {
+  color: darkorange;
+  background-color: black;
+}
