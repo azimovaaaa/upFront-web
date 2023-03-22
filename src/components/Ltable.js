@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './Ltable.css';
+import useCollapse from 'react-collapsed';
+
 
 
 var coll = document.getElementsByClassName("expand");
 var i;
+
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -18,7 +21,8 @@ for (i = 0; i < coll.length; i++) {
 }
 
 function Table_dash() {
-
+    const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+    
   return (
     <>
     <div className='container-table'>
@@ -44,10 +48,21 @@ function Table_dash() {
                 <td>Occupied</td>
                 <td>$24,320</td>
                 <td>$24,320</td>
-                <td><button class="expand"><i class="fa-sharp fa-regular fa-square-plus"></i></button></td>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                {/* <td><button class="expand"><i class="fa-sharp fa-regular fa-square-plus"></i></button></td> */}
+                <td>
+                <div className="collapsible">
+                    <div className="header" {...getToggleProps()}>
+                        {isExpanded ? 'Collapse' : 'Expand'}
+                    </div>
+                    <div {...getCollapseProps()}>
+                        <div className="content">
+                            Now you can see the hidden content. <br/><br/>
+                            Click again to hide...
+                        </div>
+                    </div>
                 </div>
+                </td>
+                
             </tr>
             <tr>
                 <td>191 Claremont Ave</td>

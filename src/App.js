@@ -11,6 +11,7 @@ import Lmarketplace from './components/pages/Lmarketplace';
 import Ldashboard from './components/pages/Ldashboard';
 import LearnMoreContainer from './components/LearnMoreContainer';
 import Manual from './components/Manual';
+import Upload from './components/Upload';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
           <Route path='/landlord-dashboard' component={Ldashboard} />
           <Route path='/sign-up' component={SignUp} />
           <Route path='/manual-upload' component={Manual} />
+          <Route path='/file-upload' component={Upload} />
+
 
 
         </Switch>
