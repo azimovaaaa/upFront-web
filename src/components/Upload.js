@@ -1,35 +1,18 @@
+import React from 'react';
 import '../App.css';
+import './Manual.css';
 import {Footer2} from './Footer';
 import {Navbar2} from './Navbar';
 import { Button } from './Button';
-import React, { useState } from 'react';
-import Popup from './Popup';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+
 
 function Upload() {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const togglePopup = () => {
-        setIsOpen(!isOpen);
-    }
   return (
     <>
     <Navbar2 />
-    <div>
-        <input
-        type="button"
-        value="Click to Open Popup"
-        onClick={togglePopup}
-        />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        {isOpen && <Popup
-        content={<>
-            <b>Design your Popup</b>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button>Test button</button>
-        </>}
-        handleClose={togglePopup}
-        />}
-    </div>
+    
     
     <Footer2 />
     </>
@@ -44,6 +27,3 @@ function Upload() {
     
 
 export default Upload;
-
-
-
