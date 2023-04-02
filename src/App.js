@@ -31,9 +31,6 @@ function App() {
           <Route path='/sign-up' component={SignUp} />
           <Route path='/manual-upload' component={Manual} />
           <Route path='/file-upload' component={Upload} />
-
-
-
         </Switch>
       </Router>
     </>

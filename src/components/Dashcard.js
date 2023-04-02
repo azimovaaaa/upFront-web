@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Dashcard.css';
 import { Button } from './Button';
 
 function DashCard(props) {
+  const { contractsOutstanding, avgPercentReceived, targetIRR, 
+          contractsNotOnMarketplace, totalContractsCompleted, ROI } = props;
+
   return (
     <>
       <div className='dash__container'>
@@ -12,21 +14,21 @@ function DashCard(props) {
             <div className='prop'>
               <div className='prop-info'>
                 <p>Contracts Outstanding</p>
-                <h1>--</h1>
+                <h1>{contractsOutstanding}</h1>
               </div>
             </div>
 
             <div className='prop'>
               <div className='prop-info'>
                 <p>Average Percent Received</p>
-                <h1>--</h1>
+                <h1>{avgPercentReceived}</h1>
               </div>
             </div>
 
             <div className='prop'>
               <div className='prop-info'>
                 <p>Target IRR</p>
-                <h1>--</h1>
+                <h1>{targetIRR}</h1>
               </div>
             </div>
           </ul>      
@@ -34,38 +36,36 @@ function DashCard(props) {
             <div className='prop'>
               <div className='prop-info'>
                 <p>Contracts Not on Marketplace</p>
-                <h1>--</h1>
+                <h1>{contractsNotOnMarketplace}</h1>
               </div>
             </div>
             <div className='prop'>
               <div className='prop-info'>
                 <p>Total Contracts Completed</p>
-                <h1>--</h1>
+                <h1>{totalContractsCompleted}</h1>
               </div>
             </div>
             <div className='prop'>
               <div className='prop-info'>
                 <p>ROI</p>
-                <h1>--</h1>
+                <h1>{ROI}</h1>
               </div>
             </div>
-            
           </ul>      
         </div>
 
         <div className='dash__wrapper'>
-               
           <ul className='dash__items'>
             <div className='prop'>
               <div className='prop-info-right'>
                 <p>Property Location Heatmap</p>
-                <h1>--</h1>
+                <h1>--TODO--</h1>
               </div>
             </div>
             <div className='prop'>
               <div className='prop-info-right'>
                 <p>Tenants that paid on time</p>
-                <h1>--</h1>
+                <h1>--TODO--</h1>
               </div>
             </div>
           </ul>
@@ -74,6 +74,7 @@ function DashCard(props) {
     </>
   );
 };
+
 
 function MDashCard(props) {
   return (
