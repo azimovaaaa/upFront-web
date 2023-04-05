@@ -109,12 +109,6 @@ function MDashCard(props) {
                 <h1>--</h1>
               </div>
             </div>
-            <div className='prop'>
-              <div className='market_prop_info'>
-                <p>Available UpFront Capital</p>
-                <h1>--</h1>
-              </div>
-            </div>
           </ul>      
         </div>
 
@@ -128,14 +122,63 @@ function MDashCard(props) {
                 <h1>$978,000</h1>
               </div>
               <div className='post-bttn'>
-                <Button>
-                  Post Contracts
-                </Button>
+                <button>
+                  <a class="button" href="#popup">Post Contracts</a> 
+                </button>
               </div>
             </div>
 
           </ul>
 
+        </div>
+        <div id="popup" class="overlay">
+          <div class="popup">
+              <a class="close" href="#">&times;</a>
+              <div className='pop_container'>
+                <div class="pop_content">
+                    <b>You've selected</b>
+                    <h1>411 West 112th St | New York, NY</h1>
+                </div>
+                <div className='post2-bttn'>
+                  <Button>
+                    List All Contracts
+                  </Button>
+                </div>
+              </div>
+
+              <div className='pop-table'>
+                <table className='unit-table'>
+                  <thead>
+                  <tr>
+                      <th >Unit Type</th>
+                      <th >Number of Units</th>
+                      <th >Gross Value</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Res, Apts</td>
+                          <td>2</td>
+                          <td>$32,000</td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div className='slider'>
+                <img alt="placeholder" src="images/placeholder.png" />
+              </div>
+
+                <div class="capital-return">
+                  <b>UpFront Capital</b>
+                  <p>$24,320</p>
+                </div>
+                <div class="capital-return" >
+                  <b>Investor Return</b>
+                  <p>$7,680</p>
+                </div>
+              
+          </div>
         </div>
       </div>
     </>

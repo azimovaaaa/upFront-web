@@ -1,5 +1,5 @@
 .container-table{
-    position: relative;
+    /* position: relative; */
     text-align: left;
     margin-left:5%; 
     margin-right:5%;
@@ -17,7 +17,7 @@ table.dash-table {
 }
 
 .container-table thead th {
-    position: sticky; 
+    /* position: sticky;  */
     top: 0px; 
     background-color: black;
     color: #AEAEAE;
@@ -27,7 +27,6 @@ th, td {
     padding: 5px 10px 5px 10px;
 
 }
-
 
 .expand {
     cursor: pointer;

@@ -258,6 +258,7 @@ h1 {
 .post-bttn{
   text-align: right;
   padding: 12px 0px 0px 0px;
+  right: 0;
 }
 .btn {
   background-color: #ED8000;
@@ -280,4 +281,103 @@ h1 {
   .dash__item {
     margin-bottom: 2rem;
   }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  height: auto;
+  max-height: 73vh;
+  margin-top: calc(106vh - 85vh - 20px);
+  background: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid #999;
+  overflow: auto;
+}
+.popup .close {
+  position: absolute;
+  top: 3px;
+  right: 13px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .pop_content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+.pop_container {
+  display: flex;
+  flex-flow: row;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.pop_content > h1 {
+  color: black;
+  font-size: 24px;
+}
+
+.post2-bttn{
+  margin-left: auto;
+}
+
+.pop-table {
+  width: 93%;
+  margin: 0 auto;
+}
+
+.pop-table thead th{
+  font-size: 15px;
+}
+.pop-table tbody td{
+  font-size: 23px;
+  font-weight: bold;
+}
+
+table.unit-table {
+  color: black;
+  column-gap: 40px;    
+  overflow-y:auto;
+  width: 80%;
+  font-size: 18px;
+}
+
+.capital-return {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  margin-left: 2rem;
+}
+
+.capital-return >p {
+    padding: 0;
+    text-align: left;
+    font-size: 23px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
 }
