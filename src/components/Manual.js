@@ -1,10 +1,31 @@
 import React, { useState } from 'react';
+import { Importer, ImporterField } from 'react-csv-importer';
+import axios from 'axios';
+import 'react-csv-importer/dist/index.css';
+
 import '../App.css';
 import './Manual.css';
 import {Footer2} from './Footer';
 import {Navbar2} from './Navbar';
-import { Importer, ImporterField } from 'react-csv-importer';
-import 'react-csv-importer/dist/index.css';
+import { parseAddress } from '../utils/Address';
+
+
+const sendPropertyData = (payload) => {
+    console.log(payload)
+    return axios({
+        method: 'post',
+        url: 'http://localhost:8000/landlord/api/properties',
+        data : payload
+    })
+        .then((response) => {
+            console.log(response);
+            return response.data;
+        })
+        .catch((error) => {
+            console.error('Error sending property data:', error);
+            return null;
+        });
+}
 
 const dataHandler = async (rows, { startIndex }) => {
     // required, may be called several times
@@ -12,8 +33,24 @@ const dataHandler = async (rows, { startIndex }) => {
     // (if this callback returns a promise, the widget will wait for it before parsing more data)
     console.log("received batch of rows", rows);
 
-    // mock timeout to simulate processing
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    for (const property of rows) {
+        const addressString = property.address;
+        const parsedAddress = parseAddress(addressString);
+
+        let payload = { 
+            landlord_id: 1,
+            address: parsedAddress,
+            property: {
+                unit_type: property.unitType,
+                occupied: true,
+                gross_value: property.grossValue,
+                upfront_capital: 0,
+                investor_return: 0,
+            }
+        };
+
+        sendPropertyData(payload);
+    }
 } 
 
 const onStart = ({ file, fields }) => {
@@ -46,7 +83,6 @@ const Manual = () => {
             onClose={onClose}
         >
             <ImporterField name="address" label="Address" />
-            <ImporterField name="location" label="Location" />
             <ImporterField name="unitType" label="Unit Type" />
             <ImporterField name="occupancyStatus" label="Occupancy Status" />
             <ImporterField name="grossValue" label="Gross Value" optional />
