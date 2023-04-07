@@ -36,11 +36,24 @@ th, td {
     text-align: left;
     outline: none;
     font-size: 15px;
-  }
+}
 
-  .content {
+.content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
-  }
+}
+
+.post-bttn button {
+    background: #ED8000;
+    border-radius: 6px;
+    padding: 12px;
+    border: none;
+}
+
+.post-bttn a.button {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}

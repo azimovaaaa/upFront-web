@@ -260,11 +260,25 @@ h1 {
   padding: 12px 0px 0px 0px;
   right: 0;
 }
-.btn {
+/* .btn {
   background-color: #ED8000;
   border-radius: 15px;
   color: white;
+} */
+
+.post-bttn button, .post2-bttn button {
+  background: #ED8000;
+  border-radius: 6px;
+  padding: 12px;
+  border: none;
 }
+
+.post-bttn a.button, .post2-bttn a.button {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
 @media only screen and (min-width: 1200px) {
   .content__blog__container {
     width: 84%;
@@ -297,12 +311,13 @@ h1 {
   visibility: visible;
   opacity: 1;
 }
+
 .popup {
   position: relative;
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   height: auto;
-  max-height: 73vh;
+  /* max-height: 73vh; */
   margin-top: calc(106vh - 85vh - 20px);
   background: #fff;
   border-radius: 4px;

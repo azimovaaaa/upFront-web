@@ -140,9 +140,9 @@ function MDashCard(props) {
                     <h1>411 West 112th St | New York, NY</h1>
                 </div>
                 <div className='post2-bttn'>
-                  <Button>
-                    List All Contracts
-                  </Button>
+                  <button>
+                  <a class="button" href="#popup">List All Contracts</a> 
+                  </button>
                 </div>
               </div>
 
