@@ -378,6 +378,13 @@ table.unit-table {
   font-size: 18px;
 }
 
+.slider img {
+  width: 50%;
+}
+.slider {
+  text-align: right;
+}
+
 .capital-return {
   float: left;
   width: 30%;
