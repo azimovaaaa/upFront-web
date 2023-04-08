@@ -12,7 +12,7 @@ const parseAddress = (addressString) => {
     number: parseInt(number),
     street: street.trim(),
     address_2: address_2.trim(),
-    city: "fyuck",
+    city: "New York",
     state: state.trim(),
     country: 'USA',
     zip_code: zip_code ? parseInt(zip_code) : null,

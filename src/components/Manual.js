@@ -43,7 +43,7 @@ const dataHandler = async (rows, { startIndex }) => {
             property: {
                 unit_type: property.unitType,
                 occupied: true,
-                gross_value: property.grossValue,
+                gross_value: property.rentAmount * property.contractLength,
                 upfront_capital: 0,
                 investor_return: 0,
             }
@@ -86,7 +86,8 @@ const Manual = () => {
                 <ImporterField name="address" label="Address" />
                 <ImporterField name="unitType" label="Unit Type" />
                 <ImporterField name="occupancyStatus" label="Occupancy Status" />
-                <ImporterField name="grossValue" label="Gross Value" optional />
+                <ImporterField name="rentAmout" label="Rent Amount" />
+                <ImporterField name="contractLength" label="Contract Length" />
             </Importer>
             <div className='heading'>
                 <div className='manual-heading'>
