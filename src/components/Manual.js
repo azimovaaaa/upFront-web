@@ -102,78 +102,40 @@ const Manual = () => {
 
             <div className='manual-table'>
                 <table className='upload-table'>
-                <thead>
-                <tr>
-                    <th >Column</th>
-                    <th >Format</th>
-                    <th >Example</th>
-                    <th >Notes</th>
-                </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>plan_amount</td>
-                        <td>Money</td>
-                        <td>12</td>
-                        <td>The amount in USD the customer is charged</td>
-                    </tr>
-                    <tr>
-                        <td>plan_amount</td>
-                        <td>number</td>
-                        <td>$99.00</td>
-                        <td>Name of the plan the subscription is on</td>
-                    </tr>
-                    <tr>
-                        <td>plan_amount</td>
-                        <td>String</td>
-                        <td>Sub-1</td>
-                        <td>End date of subscription, can be blank</td>
-                    </tr>
-                    <tr>
-                        <td>plan_amount</td>
-                        <td>Date: m/d/y</td>
-                        <td>10/1/2020</td>
-                        <td>Start date of subscription</td>
-                    </tr>
-                    <tr>
-                        <td>plan_amount</td>
-                        <td>Date: m/d/y</td>
-                        <td>Jane Doe</td>
-                        <td>Unique identifier for each subscription</td>
-                    </tr>
-                    <tr>
-                        <td>plan_amount</td>
-                        <td>Money</td>
-                        <td>$99.00</td>
-                        <td>The amount in USD the customer is charged</td>
-                    </tr>
-                    <tr>
-                        <td>plan_amount</td>
-                        <td>number</td>
-                        <td>$99.00</td>
-                        <td>Name of the plan the subscription is on</td>
-                    </tr>
-                    <tr>
-                        <td>plan_amount</td>
-                        <td>String</td>
-                        <td>Sub-1</td>
-                        <td>End date of subscription, can be blank</td>
-                    </tr>
-                    <tr>
-                        <td>plan_amount</td>
-                        <td>Date: m/d/y</td>
-                        <td>10/1/2020</td>
-                        <td>Start date of subscription</td>
-                    </tr>
-                    <tr>
-                        <td>plan_amount</td>
-                        <td>Date: m/d/y</td>
-                        <td>Jane Doe</td>
-                        <td>Unique identifier for each subscription</td>
-                    </tr>
-
-                </tbody>
-
+                    <thead>
+                        <tr>
+                            <th >Column</th>
+                            <th >Format</th>
+                            <th >Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Address</td>
+                            <td>String</td>
+                            <td>123 Abc Rd Unit 4 New York, NY 10001</td>
+                        </tr>
+                        <tr>
+                            <td>Unit Type</td>
+                            <td>String</td>
+                            <td>3 BR Apartment</td>
+                        </tr>
+                        <tr>
+                            <td>Occupancy Status</td>
+                            <td>True/False</td>
+                            <td>TRUE</td>
+                        </tr>
+                        <tr>
+                            <td>Rent Amount</td>
+                            <td>Number</td>
+                            <td>1234.56</td>
+                        </tr>
+                        <tr>
+                            <td>Contract Length (in months)</td>
+                            <td>Number</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
