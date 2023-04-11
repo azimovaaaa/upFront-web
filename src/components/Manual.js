@@ -34,18 +34,13 @@ const dataHandler = async (rows, { startIndex }) => {
     console.log("received batch of rows", rows);
 
     for (const property of rows) {
-        const addressString = property.address;
-        const parsedAddress = parseAddress(addressString);
-
         let payload = { 
             landlord_id: 1,
-            address: parsedAddress,
             property: {
                 unit_type: property.unitType,
-                occupied: true,
+                occupied: property.occupancyStatus == 'TRUE' ? true : false,
                 gross_value: property.rentAmount * property.contractLength,
-                upfront_capital: 0,
-                investor_return: 0,
+                address: property.address
             }
         };
 
