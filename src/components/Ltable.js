@@ -28,6 +28,7 @@ function TableDash(props) {
             <table className='dash-table'>
                 <thead>
                     <tr>
+                        <th>&nbsp;</th>
                         <th >Address</th>
                         <th >Location</th>
                         <th >Unit Type</th>
@@ -41,6 +42,7 @@ function TableDash(props) {
                 <tbody>
                     {props.data.map((property, index) => (
                         <tr key={index}>
+                            <td><input type="checkbox"/></td>
                             <td>{property.address}</td>
                             <td>{property.location}</td>
                             <td>{property.unit_type}</td>
