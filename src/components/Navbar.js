@@ -138,7 +138,68 @@ function Navbar2() {
       </nav>
     </>
   );
+};
+
+function Navbar3() {
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
+  window.addEventListener('resize', showButton);
+
+  return (
+    <>
+      <nav className='navbar'>
+        <div className='navbar-container'>
+          <Link to='/' onClick={closeMobileMenu}>
+            <img alt="upfront logo" src="images/logo.png" class="nav2-logo"/>
+          </Link>
+        
+          <div className='menu-icon' onClick={handleClick}>
+            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          </div>
+          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            <li className='nav-item'>
+              <Link
+                to='/investor-dashboard'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Investments
+              </Link>
+            </li>
+            
+            <li className='nav-item'>
+              <Link
+                to='/investor-marketplace'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Marketplace
+              </Link>
+            </li>
+            
+            
+          </ul>
+          
+        </div>
+      </nav>
+    </>
+  );
 }
 
-
-export {Navbar, Navbar2};
+export {Navbar, Navbar2, Navbar3};

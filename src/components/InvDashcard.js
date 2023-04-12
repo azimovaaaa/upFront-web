@@ -1,8 +1,7 @@
 import React from 'react';
 import './Dashcard.css';
-import { Button } from './Button';
 
-function DashCard(props) {
+function InvDashCard(props) {
   const { contractsOutstanding, avgPercentReceived, targetIRR, 
           contractsNotOnMarketplace, totalContractsCompleted, ROI } = props;
 
@@ -75,8 +74,8 @@ function DashCard(props) {
   );
 };
 
-// TODO: fix css of h1 for total value
-function MDashCard(props) {
+
+function InvMarketCard(props) {
   return (
     <>
       {/* <li className='dash__item'>
@@ -88,28 +87,45 @@ function MDashCard(props) {
       </li> */}
       <div className='market_dash__container'>
         <div className='dash__wrapper'>
+        <ul className='dash__items'>
+            <div className='prop'>
+              <div className='prop-info'>
+                <p>Portfolio Value</p>
+                <h1>$978,000</h1>
+              </div>
+            </div>
+
+            <div className='prop'>
+              <div className='prop-info'>
+                <p>Remaining Trading Limit</p>
+                <h1>$454,353</h1>
+              </div>
+            </div>
+
+          </ul>
           <ul className='dash__items'>
             <div className='prop'>
-              <div className='market_prop_info'>
-                <p>Total Number of Contracts</p>
-                <h1>{props.totalCount}</h1>
+              <div className='prop-info'>
+                <p>Selected Contracts</p>
+                <h1>15</h1>
               </div>
             </div>
 
             <div className='prop'>
-              <div className='market_prop_info'>
-                <p>Contracts Listed on Marketplaced</p>
-                <h1>{props.postedCount}</h1>
+              <div className='prop-info'>
+                <p>Contract Payouts</p>
+                <h1>$3,231</h1>
               </div>
             </div>
 
             <div className='prop'>
-              <div className='market_prop_info'>
-                <p>Contracts Available for Listing</p>
-                <h1>{props.totalCount - props.postedCount}</h1>
+              <div className='prop-info'>
+                <p>Cancellations</p>
+                <h1>$0</h1>
               </div>
             </div>
-          </ul>      
+          </ul>            
+                
         </div>
 
         <div className='dash__wrapper'>
@@ -123,7 +139,7 @@ function MDashCard(props) {
               </div>
               <div className='post-bttn'>
                 <button>
-                  <a class="button" href="#popup">Post Contracts</a> 
+                  <a class="button" href="#popup">Review Order</a> 
                 </button>
               </div>
             </div>
@@ -137,7 +153,7 @@ function MDashCard(props) {
               <div className='pop_container'>
                 <div class="pop_content">
                     <b>You've selected</b>
-                    <h1>411 West 112th St | New York, NY</h1>
+                    <h1>Commercial, Office &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="fa fa-star"></span> 4.82</h1>
                 </div>
                 <div className='post2-bttn'>
                   <button>
@@ -150,34 +166,37 @@ function MDashCard(props) {
                 <table className='unit-table'>
                   <thead>
                   <tr>
-                      <th >Unit Type</th>
-                      <th >Number of Units</th>
                       <th >Gross Value</th>
+                      <th >On-Time Payments</th>
+                      <th >Gross Value</th>
+                      <th >Proposed Percent Value</th>
                   </tr>
                   </thead>
                   <tbody>
                       <tr>
                           <td>Res, Apts</td>
-                          <td>2</td>
+                          <td>98%</td>
                           <td>$32,000</td>
+                          <td>98%</td>
                       </tr>
                   </tbody>
                 </table>
               </div>
 
               <div className='slider'>
-                <img alt="placeholder" src="images/placeholder.png" />
+                <img alt="placeholder" src="images/placeholderinv.png" />
+                <b>Slide to bid on new percent value</b>
               </div>
-
+              <div className='capital'>
+                <div class="capital-return" >
+                    <b>Investor Return</b>
+                    <p>$7,680</p>
+                  </div>
                 <div class="capital-return">
                   <b>UpFront Capital</b>
                   <p>$24,320</p>
                 </div>
-                <div class="capital-return" >
-                  <b>Investor Return</b>
-                  <p>$7,680</p>
-                </div>
-              
+              </div>              
           </div>
         </div>
       </div>
@@ -185,4 +204,4 @@ function MDashCard(props) {
   );
 }
 
-export {DashCard, MDashCard};
+export {InvDashCard, InvMarketCard};
