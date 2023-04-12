@@ -6,7 +6,7 @@ import {Navbar2} from '../../components/Navbar';
 import { TableDash } from '../Ltable';
 import {DashCard} from '../Dashcard';
 import PropertyService from '../../services/PropertyService';
-import formatProperty from '../../utils/Properties'
+import { formatProperty } from '../../utils/Properties'
 
 const Ldashboard = () => {
 

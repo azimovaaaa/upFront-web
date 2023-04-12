@@ -1,6 +1,5 @@
 import React from 'react';
 import { Importer, ImporterField } from 'react-csv-importer';
-import axios from 'axios';
 import 'react-csv-importer/dist/index.css';
 
 import { Button } from './Button';
