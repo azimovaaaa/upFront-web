@@ -19,7 +19,7 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-function TableDash(props) {
+function ITableDash(props) {
     const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
     
   return (
@@ -28,25 +28,28 @@ function TableDash(props) {
         <table className='dash-table'>
             <thead>
                 <tr>
-                    <th >Address</th>
+                    <th >Contract</th>
                     <th >Location</th>
                     <th >Unit Type</th>
+                    <th >Landlord Score</th>
                     <th >Gross Value</th>
-                    <th >Occupancy Status</th>
-                    <th >UpFront Capital</th>
+                    <th >On-Time Payments</th>
+                    <th >Percent Value</th>
+                    <th >LL Payout</th>
                     <th >Investor Return</th>
-                    <th >Expand</th>
                 </tr>
             </thead>
             <tbody>
                 {props.data.map((property, index) => (
                     <tr key={index}>
-                        <td>{property.address}</td>
+                        <td>{property.contract}</td>
                         <td>{property.location}</td>
                         <td>{property.unit_type}</td>
+                        <td>{property.landlord_score}</td>
                         <td>{property.gross_value}</td>
-                        <td>{property.occupied}</td>
-                        <td>{property.upfront_capital}</td>
+                        <td>{property.on_time_payment}</td>
+                        <td>{property.percent_value}</td>
+                        <td>{property.ll_payout}</td>
                         <td>{property.investor_return}</td>
                         <td>
                             <div className="collapsible">
@@ -73,7 +76,7 @@ function TableDash(props) {
 
 
 
-function Table_market() {
+function ITableMarket() {
 
     return (
         <>
@@ -82,41 +85,43 @@ function Table_market() {
             <thead>
             <tr>
                 <th>&nbsp;</th>
-                <th >Address</th>
+                <th >Contract</th>
                 <th >Location</th>
                 <th >Unit Type</th>
+                <th >Landlord Score</th>
                 <th >Gross Value</th>
-                <th >Occupancy Status</th>
-                <th >UpFront Capital</th>
+                <th >On-Time Payments</th>
+                <th >Percent Value</th>
+                <th >LL Payout</th>
                 <th >Investor Return</th>
-                <th >Expand</th>
             </tr>
             </thead>
             <tbody>
                 <tr>
                     <td><input type="checkbox"/></td>
-                    <td>411 West 112th St</td>
+                    <td>Commercial</td>
                     <td>New York, NY</td>
-                    <td>Res, Apts</td>
+                    <td>Office</td>
+                    <td>4.98</td>
                     <td>$32,000</td>
-                    <td>Occupied</td>
-                    <td>$24,320</td>
-                    <td>$24,320</td>
-                    <td><i class="fa-sharp fa-regular fa-square-plus"></i></td>
+                    <td>98%</td>
+                    <td>76%</td>
+                    <td>$24,600</td>
+                    <td>$10,800</td>
                     
                 </tr>
                 <tr>
                     <td><input type="checkbox"/></td>
-                    <td>191 Claremont Ave</td>
+                    <td>Commercial</td>
                     <td>New York, NY</td>
-                    <td>Res, Apts</td>
-                    <td>$32,000</td>
-                    <td>Occupied</td>
-                    <td>$24,320</td>
-                    <td>$24,320</td>
-                    <td><i class="fa-sharp fa-regular fa-square-plus"></i></td>
+                    <td>Family</td>
+                    <td>4.92</td>
+                    <td>$30,000</td>
+                    <td>100%</td>
+                    <td>82%</td>
+                    <td>$20,600</td>
+                    <td>$6,200</td>
                 </tr>
-                
             </tbody>
             
             </table>
@@ -129,4 +134,4 @@ function Table_market() {
 
 
 
-export {TableDash, Table_market};
+export {ITableDash, ITableMarket};
