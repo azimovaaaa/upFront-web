@@ -2,29 +2,14 @@ import React from 'react';
 import { Importer, ImporterField } from 'react-csv-importer';
 import axios from 'axios';
 import 'react-csv-importer/dist/index.css';
+
 import { Button } from './Button';
-import '../App.css';
-import './Manual.css';
 import {Footer2} from './Footer';
 import {Navbar2} from './Navbar';
+import PropertyService from '../services/PropertyService';
+import '../App.css';
+import './Manual.css';
 
-
-const sendPropertyData = (payload) => {
-    console.log(payload)
-    return axios({
-        method: 'post',
-        url: 'http://localhost:8000/landlord/api/properties',
-        data : payload
-    })
-        .then((response) => {
-            console.log(response);
-            return response.data;
-        })
-        .catch((error) => {
-            console.error('Error sending property data:', error);
-            return null;
-        });
-}
 
 const dataHandler = async (rows, { startIndex }) => {
     // required, may be called several times
@@ -43,7 +28,7 @@ const dataHandler = async (rows, { startIndex }) => {
             }
         };
 
-        sendPropertyData(payload);
+        await PropertyService.post(payload);
     }
 } 
 
@@ -80,7 +65,7 @@ const Manual = () => {
                 <ImporterField name="address" label="Address" />
                 <ImporterField name="unitType" label="Unit Type" />
                 <ImporterField name="occupancyStatus" label="Occupancy Status" />
-                <ImporterField name="rentAmout" label="Rent Amount" />
+                <ImporterField name="rentAmount" label="Rent Amount" />
                 <ImporterField name="contractLength" label="Contract Length" />
             </Importer>
             <div className='heading'>

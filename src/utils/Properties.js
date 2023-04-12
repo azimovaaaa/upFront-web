@@ -22,8 +22,16 @@ const extractStreetAddress = (address) => {
   }
 }
 
+const formatProperty = (property) => {
+  const temp = property.address;
+  return {
+    ...property,
+    address: extractStreetAddress(temp),
+    location: extractCityAndState(temp),
+    occupied: property.occupied ? 'Occupied' : 'Empty'
+  };
+};
 
 module.exports = {
-  extractStreetAddress: extractStreetAddress,
-  extractCityAndState: extractCityAndState,
+  formatProperty: formatProperty,
 };
