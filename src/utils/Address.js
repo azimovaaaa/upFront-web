@@ -1,24 +1,29 @@
-const parseAddress = (addressString) => {
-  // TODO: update the regex and city
-  const addressRegex = /(\d+)\s+([\w\s]+)\s+([#\w\s]*)\s*,?\s*([\w\s]+)\s*,?\s*([A-Za-z]{2})\s*(\d{5})?/;
-  const match = addressString.match(addressRegex);
-
-  if (!match) {
-    throw new Error(`Invalid address: ${addressString}`);
+const extractCityAndState = (address) => {
+  const regex = /\b([A-Za-z\s]+),\s*([A-Za-z]{2})\b/;
+  const match = address.match(regex);
+  if (match && match.length === 3) {
+    const city = match[1];
+    const state = match[2];
+    return `${city}, ${state}`;
+  } else {
+    return null;
   }
-
-  const [, number, street, address_2, city, state, zip_code] = match;
-  return {
-    number: parseInt(number),
-    street: street.trim(),
-    address_2: address_2.trim(),
-    city: "New York",
-    state: state.trim(),
-    country: 'USA',
-    zip_code: zip_code ? parseInt(zip_code) : null,
-  };
 }
 
+const extractStreetAddress = (address) => {
+  const regex = /^([\s\w.,&]+?)(?:\s*,\s*)?([A-Za-z\s]+),\s*([A-Za-z]{2})\b/;
+  const match = address.match(regex);
+  if (match && match.length === 4) {
+    const components = match[1].trim();
+    return components;
+  } else {
+    // Return null or throw an error if no match is found
+    return null;
+  }
+}
+
+
 module.exports = {
-  parseAddress: parseAddress
+  extractStreetAddress: extractStreetAddress,
+  extractCityAndState: extractCityAndState,
 };

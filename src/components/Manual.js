@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Importer, ImporterField } from 'react-csv-importer';
 import axios from 'axios';
 import 'react-csv-importer/dist/index.css';
@@ -7,7 +7,6 @@ import '../App.css';
 import './Manual.css';
 import {Footer2} from './Footer';
 import {Navbar2} from './Navbar';
-import { parseAddress } from '../utils/Address';
 
 
 const sendPropertyData = (payload) => {
@@ -38,7 +37,7 @@ const dataHandler = async (rows, { startIndex }) => {
             landlord_id: 1,
             property: {
                 unit_type: property.unitType,
-                occupied: property.occupancyStatus == 'TRUE' ? true : false,
+                occupied: property.occupancyStatus === 'TRUE' ? true : false,
                 gross_value: property.rentAmount * property.contractLength,
                 address: property.address
             }

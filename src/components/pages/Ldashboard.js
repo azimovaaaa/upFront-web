@@ -5,6 +5,7 @@ import { TableDash } from '../Ltable';
 import {DashCard} from '../Dashcard';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { extractCityAndState, extractStreetAddress } from '../../utils/Address';
 
 const Ldashboard = () => {
 
@@ -21,10 +22,9 @@ const Ldashboard = () => {
   }, []);
   
   properties.forEach(property => {
-    const address = `${property.address.number} ${property.address.street} ${property.address.address_2}`;
-    const location = `${property.address.city}, ${property.address.state}`;
-    property.address = address;
-    property.location = location;
+    const temp = property.address;
+    property.address = extractStreetAddress(temp);
+    property.location = extractCityAndState(temp);
     property.occupied = (property.occupied ? 'occupied' : 'empty')
   })
 
