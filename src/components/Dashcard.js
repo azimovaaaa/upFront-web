@@ -75,7 +75,7 @@ function DashCard(props) {
   );
 };
 
-
+// TODO: fix css of h1 for total value
 function MDashCard(props) {
   return (
     <>
@@ -92,27 +92,27 @@ function MDashCard(props) {
             <div className='prop'>
               <div className='market_prop_info'>
                 <p>Total Number of Contracts</p>
-                <h1>--</h1>
+                <h1>{props.totalCount}</h1>
               </div>
             </div>
 
             <div className='prop'>
               <div className='market_prop_info'>
                 <p>Contracts Listed on Marketplaced</p>
-                <h1>--</h1>
+                <h1>{props.postedCount}</h1>
               </div>
             </div>
 
             <div className='prop'>
               <div className='market_prop_info'>
                 <p>Contracts Available for Listing</p>
-                <h1>--</h1>
+                <h1>{props.totalCount - props.postedCount}</h1>
               </div>
             </div>
             <div className='prop'>
               <div className='market_prop_info'>
                 <p>Available UpFront Capital</p>
-                <h1>--</h1>
+                <h1>{props.upfrontCapital}</h1>
               </div>
             </div>
           </ul>      

@@ -28,10 +28,24 @@ const formatProperty = (property) => {
     ...property,
     address: extractStreetAddress(temp),
     location: extractCityAndState(temp),
-    occupied: property.occupied ? 'Occupied' : 'Empty'
+    occupied: property.occupied ? 'Occupied' : 'Empty',
+    gross_value: property.gross_value,
+    upfront_capital: property.percent_upfront_proposed * property.gross_value / 100,
+    investor_return: (100-property.percent_upfront_proposed) * property.gross_value / 100,
   };
 };
 
+const countPosted = (properties) => {
+  let count = 0;
+  for (let i = 0; i < properties.length; i++) {
+    if (properties[i].is_posted === true) {
+      count++;
+    }
+  }
+  return count;
+}
+
 module.exports = {
   formatProperty: formatProperty,
+  countPosted: countPosted,
 };
