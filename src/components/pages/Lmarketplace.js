@@ -12,6 +12,7 @@ import { countPosted, formatProperty } from '../../utils/Properties';
 export default function Lmarketplace() {
 
   const [properties, setProperties] = useState([]);
+  const [checkedRows, setCheckedRows] = useState([]);  // indices from properties that have been selected
   const [postedCount, setPostedCount] = useState(0);
 
   useEffect(() => {
@@ -27,6 +28,16 @@ export default function Lmarketplace() {
     };
     fetchData();
   }, []);
+
+  // Handler for checkbox change event
+  const handleCheckboxChange = (event, index) => {
+    const isChecked = event.target.checked;
+    if (isChecked) {
+        setCheckedRows([...checkedRows, index]); // Add index to checkedRows
+    } else {
+        setCheckedRows(checkedRows.filter(row => row !== index)); // Remove index from checkedRows
+    }
+  }
   
   return(
     <>
@@ -36,7 +47,11 @@ export default function Lmarketplace() {
         postedCount={postedCount}
         upfrontCapital={69}
       />
-      <TableMarketplace data={properties}/>
+      <TableMarketplace
+        data={properties}
+        checkedRows={checkedRows}
+        handleCheckboxChange={handleCheckboxChange}
+      />
       <Footer2 />
     </>
   );
