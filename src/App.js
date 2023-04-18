@@ -14,6 +14,7 @@ import Manual from './components/Manual';
 import Upload from './components/Upload';
 import Idashboard from './components/pages/Idashboard';
 import Imarketplace from './components/pages/Imarketplace';
+import Unitinfo from './components/pages/Unitinfo';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path='/sign-up' component={SignUp} />
           <Route path='/manual-upload' component={Manual} />
           <Route path='/file-upload' component={Upload} />
+          <Route path='/unit-info' component={Unitinfo} />
         </Switch>
       </Router>
     </>

@@ -183,6 +183,80 @@ function MDashCard(props) {
       </div>
     </>
   );
+};
+
+function UnitDashCard(props) {
+  return (
+    <>
+      <div className='market_dash__container'>
+        <div className='dash__wrapper'>
+
+          <div class="unit_title">
+              <h2>The Smiths</h2>
+              <b>411 West 112th St | Unit #332</b>
+          </div>
+          <div class="wrapper">
+            <b>Email</b>
+            <b>-</b>
+            <b>Home Phone #</b>
+            <b>-</b>
+            <b>Mobile Phone #</b>
+            <b>-</b>
+            <b>Property Address</b>
+            <b>-</b>
+
+            <b>Contract Type</b>
+            <b>-</b>
+            <b>Lease Length</b>
+            <b>-</b>
+            <b>Monthly Rent</b>
+            <b>-</b>
+
+            <b>Credit Score</b>
+            <b>-</b>
+            <b>Employer</b>
+            <b>-</b>
+            <b>Salary</b>
+            <b>-</b>
+
+            <b>Social Security</b>
+            <b>-</b>
+            <b>Tax Form / W2</b>
+            <b>-</b>
+            <b>License Number</b>
+            <b>-</b>
+
+            <b>Move in date</b>
+            <b>-</b>
+            <b>Move out date </b>
+            <b>-</b>
+            <b>Lease begin date </b>
+            <b>-</b>
+            <b>Lease Expiration date</b>
+            <b>-</b>
+          </div>
+                
+        </div>
+
+        <div className='dash__wrapper'>
+               
+          <div class="wrapper-right">
+            <div>Percentage of times rent was paid on time</div>
+            <div>How much time left on the lease</div>
+            <div>Financial Risk</div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div><span class="dot"></span></div>
+            <div>100%</div>
+            <div>12 months</div>
+            <div>Low Risk</div>
+          </div>
+
+        </div>
+        
+      </div>
+    </>
+  );
 }
 
-export {DashCard, MDashCard};
+export {DashCard, MDashCard, UnitDashCard};

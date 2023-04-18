@@ -2,7 +2,6 @@ import './Ltable.css';
 import useCollapse from 'react-collapsed';
 
 
-
 var coll = document.getElementsByClassName("expand");
 var i;
 
@@ -95,7 +94,7 @@ function Table_market() {
             <tbody>
                 <tr>
                     <td><input type="checkbox"/></td>
-                    <td>411 West 112th St</td>
+                    <td><a class = "lll" href="/unit-info">411 West 112th St</a></td>
                     <td>New York, NY</td>
                     <td>Res, Apts</td>
                     <td>$32,000</td>
