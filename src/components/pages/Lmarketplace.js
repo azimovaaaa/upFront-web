@@ -14,6 +14,7 @@ export default function Lmarketplace() {
   const [properties, setProperties] = useState([]);
   const [checkedRows, setCheckedRows] = useState([]);  // indices from properties that have been selected
   const [postedCount, setPostedCount] = useState(0);
+  const [totalValueSelected, setTotalValueSelected] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,13 +30,15 @@ export default function Lmarketplace() {
     fetchData();
   }, []);
 
-  // Handler for checkbox change event
+  // update chekced rows and total value
   const handleCheckboxChange = (event, index) => {
     const isChecked = event.target.checked;
     if (isChecked) {
-        setCheckedRows([...checkedRows, index]); // Add index to checkedRows
+        setCheckedRows([...checkedRows, index]);
+        setTotalValueSelected(totalValueSelected + properties[index].gross_value);
     } else {
-        setCheckedRows(checkedRows.filter(row => row !== index)); // Remove index from checkedRows
+        setCheckedRows(checkedRows.filter(row => row !== index));
+        setTotalValueSelected(totalValueSelected - properties[index].gross_value);
     }
   }
   
@@ -46,6 +49,7 @@ export default function Lmarketplace() {
         totalCount={properties.length}
         postedCount={postedCount}
         upfrontCapital={69}
+        totalValueSelected={totalValueSelected}
       />
       <TableMarketplace
         data={properties}

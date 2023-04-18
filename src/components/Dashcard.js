@@ -119,7 +119,7 @@ function MDashCard(props) {
             <div className='market_prop'>
               <div className='market_prop_info_right'>
                 <p>Total Value of Contracts Selected</p>
-                <h1>$978,000</h1>
+                <h1>${props.totalValueSelected.toLocaleString()}</h1>
               </div>
               <div className='post-bttn'>
                 <button>
