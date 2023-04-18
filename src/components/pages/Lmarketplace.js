@@ -15,6 +15,7 @@ export default function Lmarketplace() {
   const [checkedRows, setCheckedRows] = useState([]);  // indices from properties that have been selected
   const [postedCount, setPostedCount] = useState(0);
   const [totalValueSelected, setTotalValueSelected] = useState(0);
+  const [sliderValue, setSliderValue] = useState(50);  // integer represents a percentage
 
   useEffect(() => {
     const fetchData = async () => {
@@ -50,6 +51,9 @@ export default function Lmarketplace() {
         postedCount={postedCount}
         upfrontCapital={69}
         totalValueSelected={totalValueSelected}
+        checkedRows={checkedRows}
+        sliderValue={sliderValue}
+        setSliderValue={setSliderValue}
       />
       <TableMarketplace
         data={properties}

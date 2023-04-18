@@ -133,51 +133,58 @@ function MDashCard(props) {
         </div>
         <div id="popup" class="overlay">
           <div class="popup">
-              <a class="close" href="#">&times;</a>
-              <div className='pop_container'>
-                <div class="pop_content">
-                    <b>You've selected</b>
-                    <h1>411 West 112th St | New York, NY</h1>
-                </div>
-                <div className='post2-bttn'>
-                  <button>
-                  <a class="button" href="#popup">List All Contracts</a> 
-                  </button>
-                </div>
+            <a class="close" href="#">&times;</a>
+            <div className='pop_container'>
+              <div class="pop_content">
+                  <b>You've selected</b>
+                  <h1>{props.checkedRows.length} {props.checkedRows.length === 1 ? 'property' : 'properties'}</h1>
               </div>
-
-              <div className='pop-table'>
-                <table className='unit-table'>
-                  <thead>
-                  <tr>
-                      <th >Unit Type</th>
-                      <th >Number of Units</th>
-                      <th >Gross Value</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>Res, Apts</td>
-                          <td>2</td>
-                          <td>$32,000</td>
-                      </tr>
-                  </tbody>
-                </table>
+              <div className='post2-bttn'>
+                <button>
+                <a class="button" href="#popup">List All Contracts</a> 
+                </button>
               </div>
+            </div>
 
-              <div className='slider'>
-                <img alt="placeholder" src="images/placeholder.png" />
-              </div>
+            <div className='pop-table'>
+              <table className='unit-table'>
+                <thead>
+                <tr>
+                    <th >Unit Type</th>
+                    <th >Number of Units</th>
+                    <th >Gross Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>--TODO--</td>
+                        <td>--TODO--</td>
+                        <td>${props.totalValueSelected.toLocaleString()}</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
 
-                <div class="capital-return">
-                  <b>UpFront Capital</b>
-                  <p>$24,320</p>
-                </div>
-                <div class="capital-return" >
-                  <b>Investor Return</b>
-                  <p>$7,680</p>
-                </div>
-              
+            <div className='slider'>
+              <span>Percent upfront: </span>
+              <input
+                type='number'
+                min={0}
+                max={100}
+                value={props.sliderValue}
+                onChange={(e) => props.setSliderValue(parseInt(e.target.value))}
+              />
+              <span>%</span>
+            </div>
+
+            <div class="capital-return">
+              <b>UpFront Capital</b>
+              <p>${(props.totalValueSelected * props.sliderValue / 100).toLocaleString()}</p>
+            </div>
+            <div class="capital-return" >
+              <b>Investor Return</b>
+              <p>${(props.totalValueSelected * (100-props.sliderValue) / 100).toLocaleString()}</p>
+            </div>
           </div>
         </div>
       </div>
