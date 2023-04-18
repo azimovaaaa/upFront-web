@@ -35,6 +35,27 @@ class PropertyService {
       return null;
     }
   }
+
+  /* Marks a property as posted and updates the percent upfront */
+  static async postProperty(propertyId, isPosted, percentUpfrontProposed) {
+    try {
+      const response = await axios({
+        method: 'patch',
+        url: this.url + `/${propertyId}/`,
+        data: {
+          "is_posted": isPosted,
+          "percent_upfront_proposed": percentUpfrontProposed,
+        }
+      });
+      // Handle successful response
+      console.log('Property updated:', response.data);
+      return response.data;
+    } catch (error) {
+      // Handle error
+      console.error('Failed to update property:', error);
+      throw error;
+    }
+  }
 }
 
 export default PropertyService;

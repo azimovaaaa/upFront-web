@@ -42,6 +42,18 @@ export default function Lmarketplace() {
         setTotalValueSelected(totalValueSelected - properties[index].gross_value);
     }
   }
+
+  const handleButtonClick = async () => {
+    for (const i of checkedRows) {
+      try {
+        await PropertyService.postProperty(properties[i].id, true, sliderValue);
+      } catch (error) {
+        console.error('Failed to update property:', error);
+        return;
+      }
+    }
+    window.location.href = '/landlord-marketplace/#';
+  };
   
   return(
     <>
@@ -49,11 +61,11 @@ export default function Lmarketplace() {
       <MDashCard 
         totalCount={properties.length}
         postedCount={postedCount}
-        upfrontCapital={69}
         totalValueSelected={totalValueSelected}
         checkedRows={checkedRows}
         sliderValue={sliderValue}
         setSliderValue={setSliderValue}
+        handleButtonClick={handleButtonClick}
       />
       <TableMarketplace
         data={properties}

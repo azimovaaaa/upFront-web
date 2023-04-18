@@ -140,8 +140,8 @@ function MDashCard(props) {
                   <h1>{props.checkedRows.length} {props.checkedRows.length === 1 ? 'property' : 'properties'}</h1>
               </div>
               <div className='post2-bttn'>
-                <button>
-                <a class="button" href="#popup">List All Contracts</a> 
+                <button onClick={props.handleButtonClick}>
+                  <a class="button" href="#popup">List All Contracts</a> 
                 </button>
               </div>
             </div>
