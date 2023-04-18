@@ -28,14 +28,15 @@ function TableDash(props) {
             <table className='dash-table'>
                 <thead>
                     <tr>
-                        <th >Address</th>
-                        <th >Location</th>
-                        <th >Unit Type</th>
-                        <th >Gross Value</th>
-                        <th >Occupancy Status</th>
-                        <th >UpFront Capital</th>
-                        <th >Investor Return</th>
-                        <th >Expand</th>
+                        <th>Address</th>
+                        <th>Location</th>
+                        <th>Unit Type</th>
+                        <th>Gross Value</th>
+                        <th>Occupancy Status</th>
+                        <th>Is Posted</th>
+                        <th>UpFront Capital</th>
+                        <th>Investor Return</th>
+                        <th>Expand</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,8 +47,9 @@ function TableDash(props) {
                             <td>{property.unit_type}</td>
                             <td>{property.gross_value}</td>
                             <td>{property.occupied}</td>
-                            <td>{property.upfront_capital}</td>
-                            <td>{property.investor_return}</td>
+                            <td>{property.is_posted === true ? 'Yes' : 'No'}</td>
+                            <td>{property.is_posted === true ? property.upfront_capital : '--'}</td>
+                            <td>{property.is_posted === true ? property.investor_return : '--'}</td>
                             <td>
                                 <div className="collapsible">
                                     <div className="header" {...getToggleProps()}>
@@ -86,6 +88,7 @@ function TableMarketplace(props) {
                             <th>Unit Type</th>
                             <th>Gross Value</th>
                             <th>Occupancy Status</th>
+                            <th>Is Posted</th>
                             <th>UpFront Capital</th>
                             <th>Investor Return</th>
                             <th>Expand</th>
@@ -106,8 +109,9 @@ function TableMarketplace(props) {
                                 <td>{property.unit_type}</td>
                                 <td>{property.gross_value}</td>
                                 <td>{property.occupied}</td>
-                                <td>{property.upfront_capital}</td>
-                                <td>{property.investor_return}</td>
+                                <td>{property.is_posted === true ? 'Yes' : 'No'}</td>
+                                <td>{property.is_posted === true ? property.upfront_capital : '--'}</td>
+                                <td>{property.is_posted === true ? property.investor_return : '--'}</td>
                             </tr>
                         ))}
                     </tbody>

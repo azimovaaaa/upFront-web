@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 
 import '../../App.css';
 import {Footer2} from '../Footer';
-import {Navbar2} from '../../components/Navbar';
+import {Navbar2} from '../Navbar';
 import { TableDash } from '../Ltable';
 import {DashCard} from '../Dashcard';
 import PropertyService from '../../services/PropertyService';
-import { formatProperty } from '../../utils/Properties'
+import { countPosted, formatProperty } from '../../utils/Properties'
 
 const Ldashboard = () => {
 
@@ -31,7 +31,7 @@ const Ldashboard = () => {
         contractsOutstanding={properties.length} 
         avgPercentReceived={'--'} 
         targetIRR={'--'} 
-        contractsNotOnMarketplace={'--'} 
+        contractsNotOnMarketplace={properties.length - countPosted(properties)} 
         totalContractsCompleted={'--'} 
         ROI={'--'} 
         propertyLocationHeatmap={'--'} 

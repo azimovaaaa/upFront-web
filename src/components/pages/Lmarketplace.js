@@ -52,7 +52,7 @@ export default function Lmarketplace() {
         return;
       }
     }
-    window.location.href = '/landlord-marketplace/#';
+    window.location.href = '/landlord-marketplace';
   };
   
   return(
