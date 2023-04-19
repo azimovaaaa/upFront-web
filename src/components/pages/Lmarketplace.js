@@ -31,7 +31,7 @@ export default function Lmarketplace() {
     fetchData();
   }, []);
 
-  // update chekced rows and total value
+  // update checked rows and total value
   const handleCheckboxChange = (event, index) => {
     const isChecked = event.target.checked;
     if (isChecked) {
@@ -41,7 +41,7 @@ export default function Lmarketplace() {
         setCheckedRows(checkedRows.filter(row => row !== index));
         setTotalValueSelected(totalValueSelected - properties[index].gross_value);
     }
-  }
+  };
 
   const handleButtonClick = async () => {
     for (const i of checkedRows) {

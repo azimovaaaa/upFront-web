@@ -91,14 +91,14 @@ function InvMarketCard(props) {
             <div className='prop'>
               <div className='prop-info'>
                 <p>Portfolio Value</p>
-                <h1>$978,000</h1>
+                <h1>--</h1>
               </div>
             </div>
 
             <div className='prop'>
               <div className='prop-info'>
                 <p>Remaining Trading Limit</p>
-                <h1>$454,353</h1>
+                <h1>--</h1>
               </div>
             </div>
 
@@ -107,21 +107,21 @@ function InvMarketCard(props) {
             <div className='prop'>
               <div className='prop-info'>
                 <p>Selected Contracts</p>
-                <h1>15</h1>
+                <h1>{props.checkedRows.length}</h1>
               </div>
             </div>
 
             <div className='prop'>
               <div className='prop-info'>
                 <p>Contract Payouts</p>
-                <h1>$3,231</h1>
+                <h1>--</h1>
               </div>
             </div>
 
             <div className='prop'>
               <div className='prop-info'>
                 <p>Cancellations</p>
-                <h1>$0</h1>
+                <h1>--</h1>
               </div>
             </div>
           </ul>            
@@ -135,7 +135,7 @@ function InvMarketCard(props) {
             <div className='market_prop'>
               <div className='market_prop_info_right'>
                 <p>Total Value of Contracts Selected</p>
-                <h1>$978,000</h1>
+                <h1>${props.totalValueSelected.toLocaleString()}</h1>
               </div>
               <div className='post-bttn'>
                 <button>
@@ -153,7 +153,7 @@ function InvMarketCard(props) {
               <div className='pop_container'>
                 <div class="pop_content">
                     <b>You've selected</b>
-                    <h1>Commercial, Office &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<span class="fa fa-star"></span> 4.82</h1>
+                    <h1>{props.checkedRows.length} {props.checkedRows.length === 1 ? 'property' : 'properties'}</h1>
                 </div>
                 <div className='post2-bttn'>
                   <button>
@@ -166,7 +166,6 @@ function InvMarketCard(props) {
                 <table className='unit-table'>
                   <thead>
                   <tr>
-                      <th >Gross Value</th>
                       <th >On-Time Payments</th>
                       <th >Gross Value</th>
                       <th >Proposed Percent Value</th>
@@ -174,27 +173,33 @@ function InvMarketCard(props) {
                   </thead>
                   <tbody>
                       <tr>
-                          <td>Res, Apts</td>
-                          <td>98%</td>
-                          <td>$32,000</td>
-                          <td>98%</td>
+                          <td>--</td>
+                          <td>${props.totalValueSelected.toLocaleString()}</td>
+                          <td>{props.sliderValue}%</td>
                       </tr>
                   </tbody>
                 </table>
               </div>
 
               <div className='slider'>
-                <img alt="placeholder" src="images/placeholderinv.png" />
-                <b>Slide to bid on new percent value</b>
-              </div>
+              <span>Percent upfront: </span>
+              <input
+                type='number'
+                min={0}
+                max={100}
+                value={props.sliderValue}
+                onChange={(e) => props.setSliderValue(parseInt(e.target.value))}
+              />
+              <span>%</span>
+            </div>
               <div className='capital'>
                 <div class="capital-return" >
                     <b>Investor Return</b>
-                    <p>$7,680</p>
+                    <p>${(props.totalValueSelected * (100-props.sliderValue) / 100).toLocaleString()}</p>
                   </div>
                 <div class="capital-return">
                   <b>UpFront Capital</b>
-                  <p>$24,320</p>
+                  <p>${(props.totalValueSelected * props.sliderValue / 100).toLocaleString()}</p>
                 </div>
               </div>              
           </div>
