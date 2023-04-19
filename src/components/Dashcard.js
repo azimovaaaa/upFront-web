@@ -166,15 +166,15 @@ function MDashCard(props) {
             </div>
 
             <div className='slider'>
-              <span>Percent upfront: </span>
+              <b>Percent upfront: </b>
               <input
-                type='number'
+                type='range'
                 min={0}
                 max={100}
                 value={props.sliderValue}
                 onChange={(e) => props.setSliderValue(parseInt(e.target.value))}
               />
-              <span>%</span>
+              <span>{props.sliderValue}%</span>
             </div>
 
             <div class="capital-return">
