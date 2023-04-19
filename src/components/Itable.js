@@ -99,7 +99,7 @@ function ITableMarket() {
             <tbody>
                 <tr>
                     <td><input type="checkbox"/></td>
-                    <td>Commercial</td>
+                    <td><a href="/contract-info">Commercial</a></td>
                     <td>New York, NY</td>
                     <td>Office</td>
                     <td>4.98</td>
