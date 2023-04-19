@@ -188,6 +188,9 @@ function MDashCard(props) {
 function UnitDashCard(props) {
   return (
     <>
+       <div className='back_to_lm'>
+        <a  href="/landlord-marketplace"><span>&#8592;</span>List to Marketplace</a>
+      </div>
       <div className='market_dash__container'>
         <div className='dash__wrapper'>
 
@@ -252,6 +255,11 @@ function UnitDashCard(props) {
             <div>Low Risk</div>
           </div>
 
+          <div className='bids-bttn'>
+                  <button>
+                  <a class="button" href="/unit-bids">Bids</a> 
+                  </button>
+                </div>
         </div>
         
       </div>

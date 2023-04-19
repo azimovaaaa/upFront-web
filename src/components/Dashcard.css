@@ -266,14 +266,14 @@ h1 {
   color: white;
 } */
 
-.post-bttn button, .post2-bttn button {
+.post-bttn button, .post2-bttn button, .bids-bttn button {
   background: #ED8000;
   border-radius: 6px;
   padding: 12px;
   border: none;
 }
 
-.post-bttn a.button, .post2-bttn a.button {
+.post-bttn a.button, .post2-bttn a.button, .bids-bttn a.button {
   color: white;
   text-decoration: none;
   font-size: 18px;
@@ -409,7 +409,7 @@ table.unit-table {
 }
 .wrapper {
   margin-top: 1rem;
-  /* height: 80%; */
+  height: 80%;
   overflow-y: scroll;
   display: grid;
   grid-template-columns: 2fr 2fr;
@@ -417,16 +417,15 @@ table.unit-table {
   row-gap: 0.5rem;;
 }
 ::-webkit-scrollbar {
-  width: 2px;
-  height: 1px;
+  width: 5px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #888; 
+  background: rgb(26, 26, 26); 
 }
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: white; 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(146, 144, 144, 0.837); 
 }
 
 .wrapper-right {
@@ -446,4 +445,9 @@ table.unit-table {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+}
+
+.bids-bttn {
+  text-align: center;
+  margin-top: 4rem;
 }
