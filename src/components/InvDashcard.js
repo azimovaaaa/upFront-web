@@ -54,20 +54,7 @@ function InvDashCard(props) {
         </div>
 
         <div className='dash__wrapper'>
-          <ul className='dash__items'>
-            <div className='prop'>
-              <div className='prop-info-right'>
-                <p>Property Location Heatmap</p>
-                <h1>--TODO--</h1>
-              </div>
-            </div>
-            <div className='prop'>
-              <div className='prop-info-right'>
-                <p>Tenants that paid on time</p>
-                <h1>--TODO--</h1>
-              </div>
-            </div>
-          </ul>
+          
         </div>
       </div>
     </>
@@ -186,6 +173,11 @@ function InvMarketCard(props) {
               <div className='slider'>
                 <img alt="placeholder" src="images/placeholderinv.png" />
                 <b>Slide to bid on new percent value</b>
+                <div className='post-bttn'>
+                  <button>
+                    <a class="button" href="">Bid</a> 
+                  </button>
+                </div>
               </div>
               <div className='capital'>
                 <div class="capital-return" >
