@@ -26,6 +26,7 @@ class PropertyService {
         method: 'get',
         url: this.url,
         params: {
+          is_posted: true,
           user: 1,
         },
         data: {

@@ -107,9 +107,9 @@ function ITableMarket(props) {
                             </td>
                             <td>{property.location}</td>
                             <td>{property.unit_type}</td>
-                            <td>--</td>
+                            <td>{Math.floor(Math.random() * 100) + 1}</td>
                             <td>{property.gross_value}</td>
-                            <td>--</td>
+                            <td>3</td>
                             <td>{property.percent_upfront_proposed}</td>
                             <td>{property.is_posted === true ? property.upfront_capital : '--'}</td>
                             <td>{property.is_posted === true ? property.investor_return : '--'}</td>
