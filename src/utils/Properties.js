@@ -45,7 +45,23 @@ const countPosted = (properties) => {
   return count;
 }
 
+const getUnitTypesOfPosted = (properties, indices) => {
+  if (indices.length == 0) {
+    return 'None';
+  }
+
+  const type = properties[indices[0]].unit_type;
+  for (const i of indices) {
+    console.log(properties[i].unit_type)
+    if (properties[i].unit_type != type) {
+      return 'Multiple';
+    }
+  }
+  return type;
+}
+
 module.exports = {
   formatProperty: formatProperty,
   countPosted: countPosted,
+  getUnitTypesOfPosted: getUnitTypesOfPosted,
 };

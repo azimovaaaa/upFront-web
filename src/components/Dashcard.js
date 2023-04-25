@@ -67,17 +67,9 @@ function DashCard(props) {
   );
 };
 
-// TODO: fix css of h1 for total value
 function MDashCard(props) {
   return (
     <>
-      {/* <li className='dash__item'>
-        <Link className='dash__item__link' to={props.path}>
-          <div className='dash__item__info'>
-            <h5 className='dash__item__text'>{props.text}</h5>
-          </div>
-        </Link>
-      </li> */}
       <div className='market_dash__container'>
         <div className='dash__wrapper'>
           <ul className='dash__items'>
@@ -142,15 +134,13 @@ function MDashCard(props) {
               <table className='unit-table'>
                 <thead>
                 <tr>
-                    <th >Unit Type</th>
-                    <th >Number of Units</th>
-                    <th >Gross Value</th>
+                    <th>{props.checkedRows.length == 1 ? 'Unit Type' : 'Unit Types'}</th>
+                    <th>Gross Value</th>
                 </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>--TODO--</td>
-                        <td>--TODO--</td>
+                        <td>{props.selectedUnitTypes}</td>
                         <td>${props.totalValueSelected.toLocaleString()}</td>
                     </tr>
                 </tbody>

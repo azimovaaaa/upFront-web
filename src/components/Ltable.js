@@ -57,7 +57,6 @@ function TableMarketplace(props) {
                             <th>Is Posted</th>
                             <th>UpFront Capital</th>
                             <th>Investor Return</th>
-                            <th>Expand</th>
                         </tr>
                     </thead>
                     <tbody>
