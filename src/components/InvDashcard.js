@@ -177,7 +177,7 @@ function InvMarketCard(props) {
                   value={props.sliderValue}
                   onChange={(e) => props.setSliderValue(parseInt(e.target.value))}
                 />
-                <span>%{props.sliderValue}</span>
+                <span>{props.sliderValue}%</span>
               </div>
               <div className='capital'>
                 <div class="capital-return" >
