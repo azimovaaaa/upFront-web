@@ -1,6 +1,6 @@
 import React from 'react';
 import './Dashcard.css';
-import { Button } from './Button';
+
 
 function DashCard(props) {
   const { contractsOutstanding, avgPercentReceived, targetIRR, 
@@ -67,7 +67,7 @@ function DashCard(props) {
   );
 };
 
-
+// TODO: fix css of h1 for total value
 function MDashCard(props) {
   return (
     <>
@@ -84,21 +84,21 @@ function MDashCard(props) {
             <div className='prop'>
               <div className='market_prop_info'>
                 <p>Total Number of Contracts</p>
-                <h1>--</h1>
+                <h1>{props.totalCount}</h1>
               </div>
             </div>
 
             <div className='prop'>
               <div className='market_prop_info'>
                 <p>Contracts Listed on Marketplaced</p>
-                <h1>--</h1>
+                <h1>{props.postedCount}</h1>
               </div>
             </div>
 
             <div className='prop'>
               <div className='market_prop_info'>
                 <p>Contracts Available for Listing</p>
-                <h1>--</h1>
+                <h1>{props.totalCount - props.postedCount}</h1>
               </div>
             </div>
           </ul>      
@@ -111,7 +111,7 @@ function MDashCard(props) {
             <div className='market_prop'>
               <div className='market_prop_info_right'>
                 <p>Total Value of Contracts Selected</p>
-                <h1>$978,000</h1>
+                <h1>${props.totalValueSelected.toLocaleString()}</h1>
               </div>
               <div className='post-bttn'>
                 <button>
@@ -125,51 +125,58 @@ function MDashCard(props) {
         </div>
         <div id="popup" class="overlay">
           <div class="popup">
-              <a class="close" href="#">&times;</a>
-              <div className='pop_container'>
-                <div class="pop_content">
-                    <b>You've selected</b>
-                    <h1>411 West 112th St | New York, NY</h1>
-                </div>
-                <div className='post2-bttn'>
-                  <button>
+            <a class="close" href="#">&times;</a>
+            <div className='pop_container'>
+              <div class="pop_content">
+                  <b>You've selected</b>
+                  <h1>{props.checkedRows.length} {props.checkedRows.length === 1 ? 'property' : 'properties'}</h1>
+              </div>
+              <div className='post2-bttn'>
+                <button onClick={props.handleButtonClick}>
                   <a class="button" href="#popup">List All Contracts</a> 
-                  </button>
-                </div>
+                </button>
               </div>
+            </div>
 
-              <div className='pop-table'>
-                <table className='unit-table'>
-                  <thead>
-                  <tr>
-                      <th >Unit Type</th>
-                      <th >Number of Units</th>
-                      <th >Gross Value</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>Res, Apts</td>
-                          <td>2</td>
-                          <td>$32,000</td>
-                      </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div className='pop-table'>
+              <table className='unit-table'>
+                <thead>
+                <tr>
+                    <th >Unit Type</th>
+                    <th >Number of Units</th>
+                    <th >Gross Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>--TODO--</td>
+                        <td>--TODO--</td>
+                        <td>${props.totalValueSelected.toLocaleString()}</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
 
-              <div className='slider'>
-                <img alt="placeholder" src="images/placeholder.png" />
-              </div>
+            <div className='slider'>
+              <b>Percent upfront: </b>
+              <input
+                type='range'
+                min={0}
+                max={100}
+                value={props.sliderValue}
+                onChange={(e) => props.setSliderValue(parseInt(e.target.value))}
+              />
+              <span>{props.sliderValue}%</span>
+            </div>
 
-                <div class="capital-return">
-                  <b>UpFront Capital</b>
-                  <p>$24,320</p>
-                </div>
-                <div class="capital-return" >
-                  <b>Investor Return</b>
-                  <p>$7,680</p>
-                </div>
-              
+            <div class="capital-return">
+              <b>UpFront Capital</b>
+              <p>${(props.totalValueSelected * props.sliderValue / 100).toLocaleString()}</p>
+            </div>
+            <div class="capital-return" >
+              <b>Investor Return</b>
+              <p>${(props.totalValueSelected * (100-props.sliderValue) / 100).toLocaleString()}</p>
+            </div>
           </div>
         </div>
       </div>

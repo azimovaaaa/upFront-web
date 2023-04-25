@@ -76,54 +76,46 @@ function ITableDash(props) {
 
 
 
-function ITableMarket() {
+function ITableMarket(props) {
 
     return (
         <>
         <div className='container-table'>
             <table className='dash-table'>
-            <thead>
-            <tr>
-                <th>&nbsp;</th>
-                <th >Contract</th>
-                <th >Location</th>
-                <th >Unit Type</th>
-                <th >Landlord Score</th>
-                <th >Gross Value</th>
-                <th >On-Time Payments</th>
-                <th >Percent Value</th>
-                <th >LL Payout</th>
-                <th >Investor Return</th>
-            </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><input type="checkbox"/></td>
-                    <td><a href="/contract-info">Commercial</a></td>
-                    <td>New York, NY</td>
-                    <td>Office</td>
-                    <td>4.98</td>
-                    <td>$32,000</td>
-                    <td>98%</td>
-                    <td>76%</td>
-                    <td>$24,600</td>
-                    <td>$10,800</td>
-                    
-                </tr>
-                <tr>
-                    <td><input type="checkbox"/></td>
-                    <td>Commercial</td>
-                    <td>New York, NY</td>
-                    <td>Family</td>
-                    <td>4.92</td>
-                    <td>$30,000</td>
-                    <td>100%</td>
-                    <td>82%</td>
-                    <td>$20,600</td>
-                    <td>$6,200</td>
-                </tr>
-            </tbody>
-            
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th >Location</th>
+                        <th >Unit Type</th>
+                        <th >Landlord Score</th>
+                        <th >Gross Value</th>
+                        <th >On-Time Payments</th>
+                        <th >Percent Value</th>
+                        <th >LL Payout</th>
+                        <th >Investor Return</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {props.data.map((property, index) => (
+                        <tr key={index}>
+                            <td>
+                                <input
+                                    type="checkbox"
+                                    checked={props.checkedRows.includes(index)} // Set checkbox checked status based on checkedRows state
+                                    onChange={(event) => props.handleCheckboxChange(event, index)} // Call handleCheckboxChange with event and index
+                                />
+                            </td>
+                            <td>{property.location}</td>
+                            <td>{property.unit_type}</td>
+                            <td>--</td>
+                            <td>{property.gross_value}</td>
+                            <td>--</td>
+                            <td>{property.percent_upfront_proposed}</td>
+                            <td>{property.is_posted === true ? property.upfront_capital : '--'}</td>
+                            <td>{property.is_posted === true ? property.investor_return : '--'}</td>
+                        </tr>
+                    ))}
+                </tbody>
             </table>
             <br />
          </div>
