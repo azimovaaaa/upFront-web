@@ -1,0 +1,23 @@
+.back_to_lm {
+    padding: 2rem 3rem 0rem;
+}
+
+.dash__wrapper_right{
+    position: relative;
+    margin: 35px 10px 0px 45px;
+    width: 100%;
+}
+
+.wrapper >h3, .wrapper_right > h3 {
+    color: rgb(128, 127, 127);
+    font-size: 16px;
+}
+.wrapper_right {
+    margin-top: 1rem;
+    max-height: 80%;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    color: white;
+    row-gap: 0.5rem;;
+}

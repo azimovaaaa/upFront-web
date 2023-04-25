@@ -3,7 +3,7 @@
     flex-flow: column;
     margin-left: 3rem;
     margin-bottom: 4rem;
-    margin: 35px 70px 0px;
+    margin: 35px 70px 200px;
 }
 
 .manual-heading > h1{
@@ -33,7 +33,7 @@
     text-align: left;
     margin-left:5%; 
     margin-right:5%;
-    overflow-y: scroll;
+    margin-top: 2rem;
     height: 444px;
 }
 

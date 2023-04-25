@@ -66,56 +66,7 @@ const Manual = () => {
                 <ImporterField name="occupancyStatus" label="Occupancy Status" />
                 <ImporterField name="rentAmount" label="Rent Amount" />
                 <ImporterField name="contractLength" label="Contract Length" />
-            </Importer>
-            <div className='heading'>
-                <div className='manual-heading'>
-                    <h1>File Format Requirements</h1>
-                </div>
-                <div className='template-bttn'>
-                        <Button>
-                            Download Template
-                        </Button>
-                </div>
-            </div>
-
-            <div className='manual-table'>
-                <table className='upload-table'>
-                    <thead>
-                        <tr>
-                            <th >Column</th>
-                            <th >Format</th>
-                            <th >Example</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Address</td>
-                            <td>String</td>
-                            <td>123 Abc Rd Unit 4 New York, NY 10001</td>
-                        </tr>
-                        <tr>
-                            <td>Unit Type</td>
-                            <td>String</td>
-                            <td>3 BR Apartment</td>
-                        </tr>
-                        <tr>
-                            <td>Occupancy Status</td>
-                            <td>True/False</td>
-                            <td>TRUE</td>
-                        </tr>
-                        <tr>
-                            <td>Rent Amount</td>
-                            <td>Number</td>
-                            <td>1234.56</td>
-                        </tr>
-                        <tr>
-                            <td>Contract Length (in months)</td>
-                            <td>Number</td>
-                            <td>3</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            </Importer>            
         </div>
         <Footer2 />
         </>

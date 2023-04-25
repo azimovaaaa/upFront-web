@@ -2,7 +2,6 @@ import './Ltable.css';
 import useCollapse from 'react-collapsed';
 
 
-
 var coll = document.getElementsByClassName("expand");
 var i;
 

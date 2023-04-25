@@ -28,6 +28,11 @@ th, td {
 
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
 .expand {
     cursor: pointer;
     padding: 18px;
