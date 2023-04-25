@@ -60,8 +60,28 @@ const getUnitTypesOfPosted = (properties, indices) => {
   return type;
 }
 
+const combinePropertiesBids = (properties, bids) => {
+  const combinedList = [];
+  
+  const idToObjectMap = new Map();
+  for (const bid of bids) {
+    idToObjectMap.set(bid['property'], bid);
+  }
+  
+  for (const property of properties) {
+    const id = property['id'];
+    if (idToObjectMap.has(id)) {
+      const combinedObj = { ...property, ...idToObjectMap.get(id) };
+      combinedList.push(combinedObj);
+    }
+  }
+  
+  return combinedList;
+}
+
 module.exports = {
   formatProperty: formatProperty,
   countPosted: countPosted,
   getUnitTypesOfPosted: getUnitTypesOfPosted,
+  combinePropertiesBids: combinePropertiesBids,
 };

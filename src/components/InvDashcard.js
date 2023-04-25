@@ -2,8 +2,8 @@ import React from 'react';
 import './Dashcard.css';
 
 function InvDashCard(props) {
-  const { contractsOutstanding, avgPercentReceived, targetIRR, 
-          contractsNotOnMarketplace, totalContractsCompleted, ROI } = props;
+  const { bidsOutstanding, avgPercentReceived, targetIRR, 
+    pendingBids, totalContractsCompleted, ROI } = props;
 
   return (
     <>
@@ -12,30 +12,30 @@ function InvDashCard(props) {
           <ul className='dash__items'>
             <div className='prop'>
               <div className='prop-info'>
-                <p>Contracts Outstanding</p>
-                <h1>{contractsOutstanding}</h1>
+                <p>Bids Outstanding</p>
+                <h1>{bidsOutstanding}</h1>
               </div>
             </div>
 
             <div className='prop'>
               <div className='prop-info'>
                 <p>Average Percent Received</p>
-                <h1>{avgPercentReceived}</h1>
+                <h1>{avgPercentReceived}%</h1>
               </div>
             </div>
 
             <div className='prop'>
               <div className='prop-info'>
                 <p>Target IRR</p>
-                <h1>{targetIRR}</h1>
+                <h1>{targetIRR}%</h1>
               </div>
             </div>
           </ul>      
           <ul className='dash__items'>
             <div className='prop'>
               <div className='prop-info'>
-                <p>Contracts Not on Marketplace</p>
-                <h1>{contractsNotOnMarketplace}</h1>
+                <p>Pending Bids</p>
+                <h1>{pendingBids}</h1>
               </div>
             </div>
             <div className='prop'>
