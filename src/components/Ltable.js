@@ -21,7 +21,7 @@ function TableDash(props) {
                 <tbody>
                     {props.data.map((property, index) => (
                         <tr key={index}>
-                            <td>{property.address}</td>
+                            <td><a href={"/unit-info/" + property.id}>{property.address}</a></td>
                             <td>{property.location}</td>
                             <td>{property.unit_type}</td>
                             <td>{property.gross_value}</td>
@@ -69,7 +69,7 @@ function TableMarketplace(props) {
                                         onChange={(event) => props.handleCheckboxChange(event, index)} // Call handleCheckboxChange with event and index
                                     />
                                 </td>
-                                <td>{property.address}</td>
+                                <td><a href={"/unit-info/" + property.id}>{property.address}</a></td>
                                 <td>{property.location}</td>
                                 <td>{property.unit_type}</td>
                                 <td>{property.gross_value}</td>
