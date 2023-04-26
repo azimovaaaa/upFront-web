@@ -19,14 +19,14 @@ function InvDashCard(props) {
 
             <div className='prop'>
               <div className='prop-info'>
-                <p>Average Percent Received</p>
+                <p>Average Percent Provided</p>
                 <h1>{avgPercentReceived}%</h1>
               </div>
             </div>
 
             <div className='prop'>
               <div className='prop-info'>
-                <p>Target IRR</p>
+                <p>IRR</p>
                 <h1>{targetIRR}%</h1>
               </div>
             </div>
@@ -34,8 +34,8 @@ function InvDashCard(props) {
           <ul className='dash__items'>
             <div className='prop'>
               <div className='prop-info'>
-                <p>Pending Bids</p>
-                <h1>{pendingBids}</h1>
+                <p>Bids Accepted</p>
+                <h1>{0}</h1>
               </div>
             </div>
             <div className='prop'>
@@ -46,7 +46,7 @@ function InvDashCard(props) {
             </div>
             <div className='prop'>
               <div className='prop-info'>
-                <p>ROI</p>
+                <p>MOIC</p>
                 <h1>{ROI}</h1>
               </div>
             </div>

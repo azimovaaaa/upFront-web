@@ -29,11 +29,11 @@ const Ldashboard = () => {
       <Navbar2 />
       <DashCard 
         contractsOutstanding={properties.length} 
-        avgPercentReceived={'42%'} 
-        targetIRR={'7.2%'} 
+        avgPercentReceived={properties.length === 0 ? '42' : '0'} 
+        targetIRR={properties.length === 0 ? '4.2' : '0'} 
         contractsNotOnMarketplace={properties.length - countPosted(properties)} 
         totalContractsCompleted={countPosted(properties) / 2} 
-        ROI={'7.2%'} 
+        ROI={properties.length === 0 ? '4.2' : '0'} 
       />
       <TableDash data={properties}/>
       <Footer2 />

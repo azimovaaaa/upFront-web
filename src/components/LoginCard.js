@@ -40,7 +40,7 @@ function LoginCardL(props) {
                     </div>
                     <div className="d-grid gap-2 mt-3 button">
                             <button type="submit" className="btn btn-primary" href ="/landlord-dashboard">
-                                Sign In
+                                <a href='/landlord-dashboard'>Sign In</a>
                             </button>
                     </div>
 
@@ -60,7 +60,7 @@ function LoginCardI(props) {
     return (
         <>
         <div className="Auth-form-container">
-            <form className="Auth-form" onSubmit={props.onSubmit}>
+            <form className="Auth-form" >
                 <div className="Auth-form-content">
                     <h1 className="Auth-form-title">Investor Log In</h1>
                     <div className="form-group mt-3">
@@ -93,7 +93,7 @@ function LoginCardI(props) {
                     </div>
                     <div className="d-grid gap-2 mt-3 button">
                             <button type="submit" className="btn btn-primary" href ="/investor-dashboard">
-                                Sign In
+                                <a href='/investor-dashboard'>Sign In</a>
                             </button>
                     </div>
 

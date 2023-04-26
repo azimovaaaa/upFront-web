@@ -27,8 +27,8 @@ function DashCard(props) {
 
             <div className='prop'>
               <div className='prop-info'>
-                <p>Target IRR</p>
-                <h1>{targetIRR}</h1>
+                <p>IRR Provided</p>
+                <h1>{targetIRR}%</h1>
               </div>
             </div>
           </ul>      
@@ -47,8 +47,8 @@ function DashCard(props) {
             </div>
             <div className='prop'>
               <div className='prop-info'>
-                <p>ROI</p>
-                <h1>{ROI}</h1>
+                <p>MOSC Provided</p>
+                <h1>{ROI}%</h1>
               </div>
             </div>
           </ul>      
