@@ -67,17 +67,9 @@ function DashCard(props) {
   );
 };
 
-// TODO: fix css of h1 for total value
 function MDashCard(props) {
   return (
     <>
-      {/* <li className='dash__item'>
-        <Link className='dash__item__link' to={props.path}>
-          <div className='dash__item__info'>
-            <h5 className='dash__item__text'>{props.text}</h5>
-          </div>
-        </Link>
-      </li> */}
       <div className='market_dash__container'>
         <div className='dash__wrapper'>
           <ul className='dash__items'>
@@ -142,15 +134,13 @@ function MDashCard(props) {
               <table className='unit-table'>
                 <thead>
                 <tr>
-                    <th >Unit Type</th>
-                    <th >Number of Units</th>
-                    <th >Gross Value</th>
+                    <th>{props.checkedRows.length == 1 ? 'Unit Type' : 'Unit Types'}</th>
+                    <th>Gross Value</th>
                 </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>--TODO--</td>
-                        <td>--TODO--</td>
+                        <td>{props.selectedUnitTypes}</td>
                         <td>${props.totalValueSelected.toLocaleString()}</td>
                     </tr>
                 </tbody>
@@ -195,51 +185,49 @@ function UnitDashCard(props) {
 
           <div class="unit_title">
               <h2>The Smiths</h2>
-              <b>411 West 112th St | Unit #332</b>
+              <b>{props.data.address}, {props.data.location}</b>
           </div>
           <div class="wrapper">
             <b>Email</b>
-            <b>-</b>
+            <b>{`${Math.random().toString(36).substring(2, 12)}@gmail.com`}</b>
             <b>Home Phone #</b>
-            <b>-</b>
+            <b>{`(${Math.floor(Math.random() * 900 + 100)}) ${Math.floor(Math.random() * 900 + 100)}-${Math.floor(Math.random() * 9000 + 1000)}`}</b>
             <b>Mobile Phone #</b>
-            <b>-</b>
+            <b>{`(${Math.floor(Math.random() * 900 + 100)}) ${Math.floor(Math.random() * 900 + 100)}-${Math.floor(Math.random() * 9000 + 1000)}`}</b>
             <b>Property Address</b>
-            <b>-</b>
+            <b>{props.data.address}, {props.data.location}</b>
             <div></div><div></div>
 
             <b>Contract Type</b>
-            <b>-</b>
+            <b>Residential</b>
             <b>Lease Length</b>
-            <b>-</b>
+            <b>12 months</b>
             <b>Monthly Rent</b>
-            <b>-</b>
+            <b>${props.data.gross_value / 12}</b>
             <div></div><div></div>
 
             <b>Credit Score</b>
-            <b>-</b>
+            <b>800</b>
             <b>Employer</b>
-            <b>-</b>
+            <b>Upfront Capital</b>
             <b>Salary</b>
-            <b>-</b>
+            <b>${((Math.floor(Math.random() * (10 - 5 + 1)) + 5) * 10000).toLocaleString()}</b>
             <div></div><div></div>
 
             <b>Social Security</b>
-            <b>-</b>
-            <b>Tax Form / W2</b>
-            <b>-</b>
+            <b>***-**-****</b>
             <b>License Number</b>
-            <b>-</b>
+            <b>*********</b>
             <div></div><div></div>
 
             <b>Move in date</b>
-            <b>-</b>
-            <b>Move out date </b>
-            <b>-</b>
-            <b>Lease begin date </b>
-            <b>-</b>
+            <b>January 1, 2023</b>
+            <b>Move out date</b>
+            <b>December 31, 2023</b>
+            <b>Lease begin date</b>
+            <b>January 1, 2023</b>
             <b>Lease Expiration date</b>
-            <b>-</b>
+            <b>December 31, 2023</b>
           </div>
                 
         </div>
@@ -259,16 +247,104 @@ function UnitDashCard(props) {
           </div>
 
           <div className='bids-bttn'>
-                  <button>
-                  <a class="button" href="/unit-bids">Bids</a> 
-                  </button>
-                </div>
+            <button>
+              <a class="button" href={"/unit-bids/" + props.data.id}>Bids</a> 
+            </button>
+          </div>
         </div>
         
       </div>
     </>
   );
 };
+
+function BidsCard(props) {
+  return (
+    <>
+      <div className='back_to_lm'>
+        <a  href="/landlord-marketplace"><span>&#8592;</span>List to Marketplace</a>
+      </div>
+      <div className='market_dash__container'>
+        <div className='dash__wrapper'>
+
+          <div class="unit_title">
+              <h2>The Smiths</h2>
+              <b>{props.property.address}, {props.property.location}</b>
+          </div>
+          <div class="wrapper">
+            <h3>Marketplace Status:</h3>
+            <b>Posted</b>
+            <b>Email</b>
+            <b>{`${Math.random().toString(36).substring(2, 12)}@gmail.com`}</b>
+            <b>Home Phone #</b>
+            <b>{`(${Math.floor(Math.random() * 900 + 100)}) ${Math.floor(Math.random() * 900 + 100)}-${Math.floor(Math.random() * 9000 + 1000)}`}</b>
+            <b>Mobile Phone #</b>
+            <b>{`(${Math.floor(Math.random() * 900 + 100)}) ${Math.floor(Math.random() * 900 + 100)}-${Math.floor(Math.random() * 9000 + 1000)}`}</b>
+            <b>Property Address</b>
+            <b>{props.property.address}, {props.property.location}</b>
+            <div></div><div></div>
+
+            <b>Contract Type</b>
+            <b>Residential</b>
+            <b>Lease Length</b>
+            <b>12 months</b>
+            <b>Monthly Rent</b>
+            <b>${props.property.gross_value / 12}</b>
+            <div></div><div></div>
+
+            <b>Credit Score</b>
+            <b>800</b>
+            <b>Employer</b>
+            <b>Upfront Capital</b>
+            <b>Salary</b>
+            <b>${((Math.floor(Math.random() * (10 - 5 + 1)) + 5) * 10000).toLocaleString()}</b>
+            <div></div><div></div>
+
+            <b>Social Security</b>
+            <b>***-**-****</b>
+            <b>License Number</b>
+            <b>*********</b>
+            <div></div><div></div>
+
+            <b>Move in date</b>
+            <b>January 1, 2023</b>
+            <b>Move out date</b>
+            <b>December 31, 2023</b>
+            <b>Lease begin date</b>
+            <b>January 1, 2023</b>
+            <b>Lease Expiration date</b>
+            <b>December 31, 2023</b>
+          </div>
+                
+        </div>
+
+        <div className='dash__wrapper_right'>
+
+          <div class="unit_title">
+              <h2>Bids</h2>
+          </div>
+          <div class="wrapper_right">
+            {props.bids.map((bid, index) => (
+              <>
+                <h3>Investor</h3>
+                <h3>Offer</h3>
+                <b>{['John Smith', 'Jane Doe', 'Sameer Barghava'][Math.floor(Math.random() * 3)]}</b>
+                <b>{bid.bid_amount}% Percent Value<br></br>
+                  {Math.abs(bid.bid_amount - props.property.percent_upfront_proposed)}
+                  % {bid.bid_amount - props.property.percent_upfront_proposed > 0 ? 'above' : 'below'} original percentage<br />
+                  UpFront Capital: ${bid.bid_amount * props.property.gross_value / 100}<br />
+                  Investor Return: ${(100 - bid.bid_amount) * props.property.gross_value / 100}</b>
+                <h3>Assets (in millions)</h3>
+                <b>${(Math.floor(Math.random() * (10 - 5 + 1)) + 5) * 10}</b>
+                <hr /><hr />
+              </>
+            ))}
+          </div>  
+        </div>
+      </div>
+    </>
+  )
+}
 
 function ContractCard(props) {
   return (
@@ -355,4 +431,4 @@ function ContractCard(props) {
   );
 };
 
-export {DashCard, MDashCard, UnitDashCard, ContractCard};
+export {DashCard, MDashCard, UnitDashCard, ContractCard, BidsCard};

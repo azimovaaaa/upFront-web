@@ -6,7 +6,7 @@ import { Navbar2 } from '../Navbar';
 import { TableMarketplace } from '../Ltable';
 import { MDashCard } from '../Dashcard';
 import PropertyService from '../../services/PropertyService';
-import { countPosted, formatProperty } from '../../utils/Properties';
+import { countPosted, formatProperty, getUnitTypesOfPosted } from '../../utils/Properties';
 
 
 export default function Lmarketplace() {
@@ -16,6 +16,7 @@ export default function Lmarketplace() {
   const [postedCount, setPostedCount] = useState(0);
   const [totalValueSelected, setTotalValueSelected] = useState(0);
   const [sliderValue, setSliderValue] = useState(50);  // integer represents a percentage
+  const [selectedUnitTypes, setSelectedUnitTypes] = useState('None');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,9 +38,11 @@ export default function Lmarketplace() {
     if (isChecked) {
         setCheckedRows([...checkedRows, index]);
         setTotalValueSelected(totalValueSelected + properties[index].gross_value);
+        setSelectedUnitTypes(getUnitTypesOfPosted(properties, [...checkedRows, index]));
     } else {
         setCheckedRows(checkedRows.filter(row => row !== index));
         setTotalValueSelected(totalValueSelected - properties[index].gross_value);
+        setSelectedUnitTypes(getUnitTypesOfPosted(properties, checkedRows.filter(row => row !== index)));
     }
   };
 
@@ -64,6 +67,7 @@ export default function Lmarketplace() {
         totalValueSelected={totalValueSelected}
         checkedRows={checkedRows}
         sliderValue={sliderValue}
+        selectedUnitTypes={selectedUnitTypes}
         setSliderValue={setSliderValue}
         handleButtonClick={handleButtonClick}
       />

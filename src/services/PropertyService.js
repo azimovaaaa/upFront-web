@@ -20,17 +20,32 @@ class PropertyService {
     }
   }
 
+  static async getOne(id) {
+    try {
+      const response = await axios({
+        method: 'get',
+        url: this.url,
+        params: {
+          id: id,
+          user: 1,
+        }
+      });
+      return response.data;
+    } catch (error) {
+      console.error('Error retrieving property data:', error);
+      return null;
+    }
+  }
+
   static async getPosted() {
     try {
       const response = await axios({
         method: 'get',
         url: this.url,
         params: {
+          is_posted: true,
           user: 1,
         },
-        data: {
-          is_posted: true
-        }
       });
       return response.data;
     } catch (error) {

@@ -45,7 +45,43 @@ const countPosted = (properties) => {
   return count;
 }
 
+const getUnitTypesOfPosted = (properties, indices) => {
+  if (indices.length == 0) {
+    return 'None';
+  }
+
+  const type = properties[indices[0]].unit_type;
+  for (const i of indices) {
+    console.log(properties[i].unit_type)
+    if (properties[i].unit_type != type) {
+      return 'Multiple';
+    }
+  }
+  return type;
+}
+
+const combinePropertiesBids = (properties, bids) => {
+  const combinedList = [];
+  
+  const idToObjectMap = new Map();
+  for (const bid of bids) {
+    idToObjectMap.set(bid['property'], bid);
+  }
+  
+  for (const property of properties) {
+    const id = property['id'];
+    if (idToObjectMap.has(id)) {
+      const combinedObj = { ...property, ...idToObjectMap.get(id) };
+      combinedList.push(combinedObj);
+    }
+  }
+  
+  return combinedList;
+}
+
 module.exports = {
   formatProperty: formatProperty,
   countPosted: countPosted,
+  getUnitTypesOfPosted: getUnitTypesOfPosted,
+  combinePropertiesBids: combinePropertiesBids,
 };

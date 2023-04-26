@@ -6,6 +6,7 @@ import { ITableMarket } from '../Itable';
 import { InvMarketCard } from '../InvDashcard';
 import { formatProperty } from '../../utils/Properties';
 import PropertyService from '../../services/PropertyService';
+import BidService from '../../services/BidService';
 
 export default function Imarketplace() {
   
@@ -42,9 +43,9 @@ export default function Imarketplace() {
   const handleButtonClick = async () => {
     for (const i of checkedRows) {
       try {
-        // await PropertyService.postProperty(properties[i].id, true, sliderValue);
+        await BidService.post(postedProperties[i].id, 1, sliderValue);
       } catch (error) {
-        console.error('Failed to update property:', error);
+        console.error('Failed to make bid[s]:', error);
         return;
       }
     }
@@ -60,6 +61,10 @@ export default function Imarketplace() {
         sliderValue={sliderValue}
         setSliderValue={setSliderValue}
         handleButtonClick={handleButtonClick}
+        portfolioValue={23000}
+        tradingLimit={100000}
+        contractPayouts={5}
+        cancellations={1}
       />
       <ITableMarket
         data={postedProperties}
