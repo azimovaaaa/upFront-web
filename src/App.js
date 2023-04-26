@@ -37,10 +37,9 @@ function App() {
           <Route path='/investor-marketplace' component={Imarketplace} />
           <Route path='/sign-up' component={SignUp} />
           <Route path='/manual-upload' component={Manual} />
-          <Route path='/file-upload' component={Upload} />
-          <Route path='/unit-info' component={Unitinfo} />
-          <Route path='/contract-info' component={Contractinfo} />
-          <Route path='/unit-bids' component={Bids} />
+          <Route path='/unit-info/:id' component={Unitinfo} />
+          <Route path='/contract-info/:id' component={Contractinfo} />
+          <Route path='/unit-bids/:id' component={Bids} />
         </Switch>
       </Router>
     </>

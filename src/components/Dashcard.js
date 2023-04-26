@@ -249,10 +249,10 @@ function UnitDashCard(props) {
           </div>
 
           <div className='bids-bttn'>
-                  <button>
-                  <a class="button" href="/unit-bids">Bids</a> 
-                  </button>
-                </div>
+            <button>
+              <a class="button" href={"/unit-bids/" + props.data.id}>Bids</a> 
+            </button>
+          </div>
         </div>
         
       </div>
