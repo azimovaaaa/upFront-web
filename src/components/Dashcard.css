@@ -481,3 +481,7 @@ table.unit-table {
   text-align: center;
   margin-top: 4rem;
 }
+button#accept-offer{
+  width: 20%;
+  margin-left: 12rem;
+}
