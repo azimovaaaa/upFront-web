@@ -57,7 +57,7 @@ function DashCard(props) {
         <div className='dash__wrapper'>
           <div className='post-bttn'>
             <button>
-              <a class="button" href="/manual-upload">Upload Contract</a> 
+              <a class="button" href="/landlord-connect">Upload Contract</a> 
             </button>
           </div>
           
@@ -117,7 +117,7 @@ function MDashCard(props) {
         </div>
         <div id="popup" class="overlay">
           <div class="popup">
-            <a class="close" href="#">&times;</a>
+            <a class="close" href="/landlord-marketplace#">&times;</a>
             <div className='pop_container'>
               <div class="pop_content">
                   <b>You've selected</b>
