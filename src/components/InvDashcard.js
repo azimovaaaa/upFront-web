@@ -171,13 +171,13 @@ function InvMarketCard(props) {
               <div className='slider'>
                 <b>Percent upfront: </b>
                 <input
-                  type='number'
+                  type='range'
                   min={0}
                   max={100}
                   value={props.sliderValue}
                   onChange={(e) => props.setSliderValue(parseInt(e.target.value))}
                 />
-                <span>%{props.sliderValue}</span>
+                <span>{props.sliderValue}%</span>
               </div>
               <div className='capital'>
                 <div class="capital-return" >
