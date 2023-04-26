@@ -4,6 +4,7 @@ import { Navbar2 } from '../../components/Navbar';
 import { Footer2 } from '../Footer';
 import { UnitDashCard } from '../Dashcard';
 import PropertyService from '../../services/PropertyService';
+import { formatProperty } from '../../utils/Properties';
 
 function Unitinfo(props) {
   
@@ -13,7 +14,7 @@ function Unitinfo(props) {
     const fetchData = async () => {
       try {
         const data = await PropertyService.getOne(props.match.params.id);
-        setProperty(data[0]);
+        setProperty(formatProperty(data[0]));
       } catch (error) {
         console.error('Error fetching property data:', error);
       }

@@ -185,51 +185,49 @@ function UnitDashCard(props) {
 
           <div class="unit_title">
               <h2>The Smiths</h2>
-              <b>411 West 112th St | Unit #332</b>
+              <b>{props.data.address}, {props.data.location}</b>
           </div>
           <div class="wrapper">
             <b>Email</b>
-            <b>-</b>
+            <b>{`${Math.random().toString(36).substring(2, 12)}@gmail.com`}</b>
             <b>Home Phone #</b>
-            <b>-</b>
+            <b>{`(${Math.floor(Math.random() * 900 + 100)}) ${Math.floor(Math.random() * 900 + 100)}-${Math.floor(Math.random() * 9000 + 1000)}`}</b>
             <b>Mobile Phone #</b>
-            <b>-</b>
+            <b>{`(${Math.floor(Math.random() * 900 + 100)}) ${Math.floor(Math.random() * 900 + 100)}-${Math.floor(Math.random() * 9000 + 1000)}`}</b>
             <b>Property Address</b>
-            <b>-</b>
+            <b>{props.data.address}, {props.data.location}</b>
             <div></div><div></div>
 
             <b>Contract Type</b>
-            <b>-</b>
+            <b>Residential</b>
             <b>Lease Length</b>
-            <b>-</b>
+            <b>12 months</b>
             <b>Monthly Rent</b>
-            <b>-</b>
+            <b>${props.data.gross_value / 12}</b>
             <div></div><div></div>
 
             <b>Credit Score</b>
-            <b>-</b>
+            <b>800</b>
             <b>Employer</b>
-            <b>-</b>
+            <b>Upfront Capital</b>
             <b>Salary</b>
-            <b>-</b>
+            <b>${((Math.floor(Math.random() * (10 - 5 + 1)) + 5) * 10000).toLocaleString()}</b>
             <div></div><div></div>
 
             <b>Social Security</b>
-            <b>-</b>
-            <b>Tax Form / W2</b>
-            <b>-</b>
+            <b>***-**-****</b>
             <b>License Number</b>
-            <b>-</b>
+            <b>*********</b>
             <div></div><div></div>
 
             <b>Move in date</b>
-            <b>-</b>
+            <b>January 1, 2023</b>
             <b>Move out date </b>
-            <b>-</b>
+            <b>December 31, 2023</b>
             <b>Lease begin date </b>
-            <b>-</b>
+            <b>January 1, 2023</b>
             <b>Lease Expiration date</b>
-            <b>-</b>
+            <b>December 31, 2023</b>
           </div>
                 
         </div>
