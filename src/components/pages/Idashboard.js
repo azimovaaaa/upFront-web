@@ -32,10 +32,10 @@ const Idashboard = () => {
       <InvDashCard 
         bidsOutstanding={combinedPropertiesBids.length}
         pendingBids={combinedPropertiesBids.length}
-        avgPercentReceived={100}
-        targetIRR={7} 
-        totalContractsCompleted={2} 
-        ROI={7} 
+        avgPercentReceived={combinedPropertiesBids.length !== 0 ? 100 : 0}
+        targetIRR={combinedPropertiesBids.length !== 0 ? 7 : 0} 
+        totalContractsCompleted={combinedPropertiesBids.length !== 0 ? 5 : 0} 
+        ROI={combinedPropertiesBids.length !== 0 ? 7 : 0} 
       />
       <ITableDash data={combinedPropertiesBids}/>
       <Footer2 />

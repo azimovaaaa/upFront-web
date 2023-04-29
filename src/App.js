@@ -11,7 +11,6 @@ import Lmarketplace from './components/pages/Lmarketplace';
 import Ldashboard from './components/pages/Ldashboard';
 import LearnMoreContainer from './components/LearnMoreContainer';
 import Manual from './components/Manual';
-import Upload from './components/Upload';
 import Idashboard from './components/pages/Idashboard';
 import Imarketplace from './components/pages/Imarketplace';
 import Unitinfo from './components/pages/Unitinfo';

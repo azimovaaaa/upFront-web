@@ -14,11 +14,9 @@ function HeroSection() {
         <div className='text_1'>
           <h1 class="txt-shine">Transform rent contracts into upfront capital</h1>
           <p>Built for landlords, property owners, and property managers to access early liquidity – unlock the value of your rental income streams immediately</p>
-          <Button className='btns'
-              buttonSize='btn--large'
-              >
-                Join our Mailing List to Stay in Touch
-            </Button>
+          <Button className='btns'buttonSize='btn--large'>
+            Sign Up
+          </Button>
         </div>
       </div>
       
