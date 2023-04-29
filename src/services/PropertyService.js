@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 class PropertyService {
-  static url = 'http://localhost:8000/landlord/api/properties';
+  static url = 'http://54.158.130.10:8000/landlord/api/properties';
   
   static async get() {
     try {

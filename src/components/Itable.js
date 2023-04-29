@@ -39,7 +39,7 @@ function ITableDash(props) {
             <tbody>
                 {props.data.map((propertyBid, index) => (
                     <tr key={index}>
-                        <td><a href={"/unit-info/" + propertyBid.property}>{propertyBid.address}</a></td>
+                        <td>{propertyBid.address}</td>
                         <td>{propertyBid.location}</td>
                         <td>{propertyBid.unit_type}</td>
                         <td>{propertyBid.landlord_score}</td>
@@ -89,7 +89,7 @@ function ITableMarket(props) {
                                     onChange={(event) => props.handleCheckboxChange(event, index)} // Call handleCheckboxChange with event and index
                                 />
                             </td>
-                            <td><a href={"/unit-info/" + property.id}>{property.address}</a></td>
+                            <td>{property.address}</td>
                             <td>{property.location}</td>
                             <td>{property.unit_type}</td>
                             <td>{property.landlord_score}</td>

@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 class BidService {
-  static url = 'http://localhost:8000/landlord/api/bids';
+  static url = 'http://54.158.130.10:8000/landlord/api/bids';
   
   /* Gets all bids */
   static async get() {
