@@ -334,7 +334,7 @@ function BidsCard(props) {
                   % {bid.bid_amount - props.property.percent_upfront_proposed > 0 ? 'above' : 'below'} original percentage<br />
                   UpFront Capital: ${bid.bid_amount * props.property.gross_value / 100}<br />
                   Investor Return: ${(100 - bid.bid_amount) * props.property.gross_value / 100}</b><br />
-                  <button></button>
+                  <b></b>
 
                 <h3>Assets (in millions)</h3>
                 <b>${(Math.floor(Math.random() * (10 - 5 + 1)) + 5) * 10}</b>
