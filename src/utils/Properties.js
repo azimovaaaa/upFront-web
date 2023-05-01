@@ -22,7 +22,7 @@ const extractStreetAddress = (address) => {
   }
 }
 
-const formatProperty = (property) => {
+export const formatProperty = (property) => {
   const temp = property.address;
   return {
     ...property,
@@ -33,9 +33,9 @@ const formatProperty = (property) => {
     upfront_capital: property.percent_upfront_proposed * property.gross_value / 100,
     investor_return: (100-property.percent_upfront_proposed) * property.gross_value / 100,
   };
-};
+}
 
-const countPosted = (properties) => {
+export const countPosted = (properties) => {
   let count = 0;
   for (let i = 0; i < properties.length; i++) {
     if (properties[i].is_posted === true) {
@@ -45,7 +45,7 @@ const countPosted = (properties) => {
   return count;
 }
 
-const getUnitTypesOfPosted = (properties, indices) => {
+export const getUnitTypesOfPosted = (properties, indices) => {
   if (indices.length === 0) {
     return 'None';
   }
@@ -60,7 +60,7 @@ const getUnitTypesOfPosted = (properties, indices) => {
   return type;
 }
 
-const combinePropertiesBids = (properties, bids) => {
+export const combinePropertiesBids = (properties, bids) => {
   const combinedList = [];
   
   const idToObjectMap = new Map();
@@ -78,10 +78,3 @@ const combinePropertiesBids = (properties, bids) => {
   
   return combinedList;
 }
-
-module.exports = {
-  formatProperty: formatProperty,
-  countPosted: countPosted,
-  getUnitTypesOfPosted: getUnitTypesOfPosted,
-  combinePropertiesBids: combinePropertiesBids,
-};

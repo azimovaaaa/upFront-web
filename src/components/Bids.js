@@ -4,18 +4,17 @@ import {Footer2} from './Footer';
 import './Bids.css';
 import { BidsCard } from './Dashcard';
 import PropertyService from '../services/PropertyService';
-import { formatProperty } from '../utils/Properties';
 import BidService from '../services/BidService';
 
 function Bids(props) {
   const [property, setProperty] = useState({});
-  const [bids, setBids] = useState([])
+  const [bids, setBids] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await PropertyService.getOne(props.match.params.id);
-        setProperty(formatProperty(data[0]));
+        setProperty(data[0]);
         const data2 = await BidService.getByProperty(props.match.params.id);
         setBids(data2);
       } catch (error) {
