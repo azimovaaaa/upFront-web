@@ -29,7 +29,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            <img alt="upfront logo" src="https://raw.githubusercontent.com/azimovaaaa/upFront-web/master/public/images/logo.png?token=GHSAT0AAAAAACBPMWDQWOC5RTN44USP5FFQZCOAMCQ" class="nav-logo"/>
+            <img alt="upfront logo" src="images/logo.png" class="nav-logo"/>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -104,7 +104,7 @@ function Navbar2() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' onClick={closeMobileMenu}>
-            <img alt="upfront logo" src="https://raw.githubusercontent.com/azimovaaaa/upFront-web/master/public/images/logo.png?token=GHSAT0AAAAAACBPMWDQWOC5RTN44USP5FFQZCOAMCQ" class="nav2-logo"/>
+            <img alt="upfront logo" src="https://i.ibb.co/kSR1Dhn/logo.png" class="nav2-logo"/>
           </Link>
         
           <div className='menu-icon' onClick={handleClick}>
