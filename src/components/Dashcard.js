@@ -134,7 +134,7 @@ function MDashCard(props) {
               <table className='unit-table'>
                 <thead>
                 <tr>
-                    <th>{props.checkedRows.length == 1 ? 'Unit Type' : 'Unit Types'}</th>
+                    <th>{props.checkedRows.length === 1 ? 'Unit Type' : 'Unit Types'}</th>
                     <th>Gross Value</th>
                 </tr>
                 </thead>
@@ -269,7 +269,7 @@ function BidsCard(props) {
 
           <div class="unit_title">
               <h2>The Smiths</h2>
-              <b>{props.property.address}, {props.property.location}</b>
+              <b>{props.property.address}</b>
           </div>
           <div class="wrapper">
             <h3>Marketplace Status:</h3>
@@ -281,7 +281,7 @@ function BidsCard(props) {
             <b>Mobile Phone #</b>
             <b>{`(${Math.floor(Math.random() * 900 + 100)}) ${Math.floor(Math.random() * 900 + 100)}-${Math.floor(Math.random() * 9000 + 1000)}`}</b>
             <b>Property Address</b>
-            <b>{props.property.address}, {props.property.location}</b>
+            <b>{props.property.address}</b>
             <div></div><div></div>
 
             <b>Contract Type</b>
