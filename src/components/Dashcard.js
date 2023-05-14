@@ -48,7 +48,7 @@ function DashCard(props) {
             <div className='prop'>
               <div className='prop-info'>
                 <p>MOIC Provided</p>
-                <h1>{ROI}%</h1>
+                <h1>{ROI}x</h1>
               </div>
             </div>
           </ul>      
